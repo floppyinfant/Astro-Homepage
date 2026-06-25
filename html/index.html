@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deep Sky | Amateur Astronomie</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Style -------------------------------------------------------------------------- -->
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            space: {
+              900: '#0B0D17',
+              800: '#15192B',
+              700: '#1E2340',
+              600: '#2A3050',
+              accent: '#6366F1',
+              gold: '#F59E0B'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Space Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Style End ---------------------------------------------------------------------- -->
+  
+</head>
+
+<body class="bg-space-900 text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- Starfield Canvas -->
+  <canvas id="starfield" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+  <!-- Header ------------------------------------------------------------------------- -->
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <div class="flex items-center gap-3">
+          <i data-lucide="telescope" class="w-8 h-8 text-space-accent"></i>
+          <span class="font-bold text-xl tracking-tight">Deep Sky</span>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#home" class="text-sm font-medium text-gray-300 hover:text-white transition">Home</a>
+          <a href="#dimensions" class="text-sm font-medium text-gray-300 hover:text-white transition">Skala des Universums</a>
+          <a href="#gallery" class="text-sm font-medium text-gray-300 hover:text-white transition">Fotogalerie</a>
+          <a href="#about" class="text-sm font-medium text-gray-300 hover:text-white transition">Über</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden p-2 hover:bg-white/10 rounded-lg transition">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden glass border-t border-space-700">
+      <div class="px-4 py-6 space-y-4">
+        <a href="#home" class="block text-base font-medium text-gray-300 hover:text-white">Home</a>
+        <a href="#dimensions" class="block text-base font-medium text-gray-300 hover:text-white">Skala des Universums</a>
+        <a href="#gallery" class="block text-base font-medium text-gray-300 hover:text-white">Fotogalerie</a>
+        <a href="#about" class="block text-base font-medium text-gray-300 hover:text-white">Über</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Pages -------------------------------------------------------------------------- -->
+
+  <!-- Intro -->
+  <!-- Slider -->
+  <!-- Hero -->
+  <header id="home" class="relative z-10 min-h-screen flex items-center justify-center px-4">
+    <div class="text-center max-w-5xl mx-auto relative z-10 pt-20">
+      <p class="font-mono text-space-gold tracking-[0.3em] text-sm mb-6 uppercase animate-pulse">Explore the Universe</p>
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 leading-[1.1]">
+        Deep Sky<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">Astrophotography</span>
+      </h1>
+      <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+        Eine Reise durch den Kosmos mit Bildern von entfernten Galaxien, Nebeln und Sternen.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#gallery" class="group px-8 py-4 bg-white text-space-900 font-bold rounded-full hover:bg-gray-200 transition-all flex items-center justify-center gap-2">
+          Fotogalerie
+          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="#dimensions" class="px-8 py-4 border border-white/20 rounded-full hover:bg-white/10 transition backdrop-blur-sm text-center">
+          Skala des Universums
+        </a>
+      </div>
+    </div>
+
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <i data-lucide="chevron-down" class="w-6 h-6 text-white/40"></i>
+    </div>
+  </header>
+
+  <!-- NASA APOD Section -->
+  <!-- deleted - moved to sections_bak -->
+
+  <!-- Photogallery ------------------------------------------------------------------- -->
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="relative z-10 py-24 px-4 bg-space-800/40">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-6 fade-in">
+        <span class="font-mono text-sm text-space-accent uppercase tracking-wider">Galerie</span>
+        <h2 class="text-3xl md:text-5xl font-bold mt-3 mb-4">Astrophotography</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+          Deep Sky Objects aufgenommen mit Smart-Teleskop und DSLR
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap justify-center gap-3 mb-14 fade-in" id="gallery-filters">
+        <button class="filter-btn active px-6 py-2.5 rounded-full text-sm font-medium border border-space-600 transition-all" data-filter="all">All</button>
+        <button class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium border border-space-600 transition-all" data-filter="nebulae">Nebel</button>
+        <button class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium border border-space-600 transition-all" data-filter="galaxies">Galaxien</button>
+        <button class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium border border-space-600 transition-all" data-filter="clusters">Sterne</button>
+        <button class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium border border-space-600 transition-all" data-filter="solar">Solar System</button>
+        <!--
+        <button class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium border border-space-600 transition-all" data-filter="deep">Deep Field</button>
+        -->
+      </div>
+
+      <!-- Grid -->
+      <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+    <!-- Lightbox Modal -->
+  <div id="lightbox" class="fixed inset-0 z-[60] opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="absolute inset-0 bg-black/95 backdrop-blur-sm" id="lightbox-overlay"></div>
+    <div class="relative z-10 h-full flex flex-col items-center justify-center p-4">
+      <button id="lightbox-close" class="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-full transition z-20">
+        <i data-lucide="x" class="w-8 h-8"></i>
+      </button>
+      <button id="lightbox-prev" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 p-3 hover:bg-white/10 rounded-full transition z-20">
+        <i data-lucide="chevron-left" class="w-8 h-8"></i>
+      </button>
+      <button id="lightbox-next" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 p-3 hover:bg-white/10 rounded-full transition z-20">
+        <i data-lucide="chevron-right" class="w-8 h-8"></i>
+      </button>
+
+      <div class="max-w-6xl w-full max-h-[85vh] flex flex-col md:flex-row gap-8 items-center">
+        <div class="flex-1 w-full flex items-center justify-center">
+          <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[50vh] md:max-h-[70vh] object-contain rounded-lg shadow-2xl border border-space-700">
+        </div>
+        <div class="w-full md:w-80 text-left md:self-center flex-shrink-0">
+          <span id="lightbox-category" class="text-xs font-mono text-space-gold uppercase tracking-wider"></span>
+          <h3 id="lightbox-title" class="text-2xl md:text-3xl font-bold mt-2 mb-3"></h3>
+          <p id="lightbox-desc" class="text-gray-400 text-sm leading-relaxed mb-4"></p>
+          <p id="lightbox-desc_meta" class="text-gray-400 text-sm leading-relaxed mb-4"></p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4"><a id="lightbox-desc_link" href="" target="_blank">lies mehr</a></p> <!-- Neu -->
+          <div class="flex items-center gap-2 text-xs text-gray-600 font-mono">
+            <i data-lucide="calendar" class="w-3 h-3"></i>
+            <span id="lightbox-date"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Guides Section ----------------------------------------------------------------- -->
+  <!-- FAQ -->
+  <!-- How-Tos -->
+
+  <!-- Dimensions Section ------------------------------------------------------------- -->
+  <!-- Orders of Magnitude, Scale of the Universe -->
+
+  <section id="dimensions" class="relative z-10 py-24 px-4">
+    <!--  -->
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-6 fade-in">
+        <span class="font-mono text-sm text-space-accent uppercase tracking-wider">Orders of Magnitude</span>
+        <h2 class="text-3xl md:text-5xl font-bold mt-3 mb-4">Vom Kleinsten zum Größten<br>und alles dazwischen</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">Objektgrößen und Entfernungen</p>
+        <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">Scrolle horizontal. Nutze die Maus oder die Pfeiltasten deiner Tastatur im Overlay.</p>
+      </div>
+    
+      <div class="scale-container" id="scrollContainer">
+        
+        <!-- Karte 1: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "img/physiker.jpg",
+                    "text": "Max Planck erkannte 1899, dass mit der von ihm entdeckten Konstante h in Verbindung mit der Gravitationskonstante und der Lichtgeschwindigkeit Maßeinheiten für Länge, Zeit und Masse definiert werden können - für alle Zeiten und für alle, auch ausserirdische und aussermenschliche Culturen",
+                    "wiki": "https://de.wikipedia.org/wiki/Planck-L%C3%A4nge"
+                },
+                {
+                    "img": "",
+                    "text": "Grundkräfte der Physik: Gravitation, Elektromagnetische Wechselwirkung, Schwache und Starke Wechselwirkung",
+                    "wiki": "https://de.wikipedia.org/wiki/Fundamentale_Wechselwirkung"
+                },
+                {
+                    "img": "",
+                    "text": "Quentenmechanik",
+                    "wiki": "https://de.wikipedia.org/wiki/Quantenmechanik"
+                },
+                {
+                    "img": "",
+                    "text": "Quantengravitation",
+                    "wiki": "https://de.wikipedia.org/wiki/Gravitationswelle"
+                },
+                {
+                    "img": "",
+                    "text": "String-Theorie: ... aufgerollte Dimensionen ... Weltformel",
+                    "wiki": "https://de.wikipedia.org/wiki/Stringtheorie"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-35</sup> m</div>
+            <img class="card-image" src="img/physiker.jpg" alt="">
+            <div class="card-title">Planck Länge</div>
+            <div class="card-desc">Kleinste physikalisch sinnvolle Länge</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 2: Elementarteilchen -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Elementarteilchen sind punktförmig und haben eigentlich keine messbare Ausdehnung. Sie sind aber jedenfalls kleiner als 10<sup>-22</sup>m. <br>Fermionen (Quarks, Leptonen), Bosonen",
+                    "wiki": "https://de.wikipedia.org/wiki/Elementarteilchen"
+                },
+                {
+                    "img": "",
+                    "text": "Quarks",
+                    "wiki": "https://de.wikipedia.org/wiki/Quark_(Physik)"
+                },
+                {
+                    "img": "",
+                    "text": "Elektron",
+                    "wiki": "https://de.wikipedia.org/wiki/Elektron"
+                },
+                {
+                    "img": "",
+                    "text": "Photon",
+                    "wiki": "https://de.wikipedia.org/wiki/Photon"
+                },
+                {
+                    "img": "",
+                    "text": "Antiteilchen",
+                    "wiki": "https://de.wikipedia.org/wiki/Antiteilchen"
+                },
+                {
+                    "img": "",
+                    "text": "Die Grenze des Meßbaren liegt bei 100 Attometer (1 am = 10<sup>-18</sup> m); darunter gibt es nur Schätzungen und Hypothesen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Liste_von_Gr%C3%B6%C3%9Fenordnungen_der_L%C3%A4nge"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-22</sup> m = 100 ym</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Elementarteilchen</div>
+            <div class="card-desc">Teilchenphysik und Quantenmechanik</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Subatomare Teilchen sind die Elementarteilchen (z.B. Quarks, Elektron, Photon) sowie zusammengestzte Teilchen (Baryonen, Nukleonen: z.B. Proton, Neutron)",
+                    "wiki": "https://de.wikipedia.org/wiki/Subatomares_Teilchen"
+                },
+                {
+                    "img": "",
+                    "text": "Proton: Durchmesser 1,7 fm",
+                    "wiki": "https://de.wikipedia.org/wiki/Proton"
+                },
+                {
+                    "img": "",
+                    "text": "Neutron",
+                    "wiki": "https://de.wikipedia.org/wiki/Neutron"
+                },
+                {
+                    "img": "",
+                    "text": "Der Atomkern ist 20.000 bis 150.000 mal kleiner als die Atomhülle, hat aber 99,9% der Masse.",
+                    "wiki": "https://de.wikipedia.org/wiki/Atomkern"
+                },
+                {
+                    "img": "",
+                    "text": "Kernspin: NMR (nuclear magnetic resonance), CT (Computer Tomographie), MRT (Magnetresonanztomographie) in der Medizin",
+                    "wiki": "https://de.wikipedia.org/wiki/Kernspinresonanz"
+                },
+                {
+                    "img": "",
+                    "text": "Radioaktivität",
+                    "wiki": "https://de.wikipedia.org/wiki/Radioaktivit%C3%A4t"
+                },
+                {
+                    "img": "",
+                    "text": "Kernreaktion",
+                    "wiki": "https://de.wikipedia.org/wiki/Kernreaktion"
+                },
+                {
+                    "img": "",
+                    "text": "Kernspaltung",
+                    "wiki": "https://de.wikipedia.org/wiki/Kernspaltung"
+                },
+                {
+                    "img": "",
+                    "text": "Kernfusion",
+                    "wiki": "https://de.wikipedia.org/wiki/Kernfusion"
+                },
+                {
+                    "img": "",
+                    "text": "Materie",
+                    "wiki": "https://de.wikipedia.org/wiki/Materie_(Physik)"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-15</sup> m = 1 fm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Nukleonen</div>
+            <div class="card-desc">Kernphysik</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Atom",
+                    "wiki": "https://de.wikipedia.org/wiki/Atomradius"
+                },
+                {
+                    "img": "",
+                    "text": "Der Atomradius des Wasserstoffatoms beträgt 53 pm",
+                    "wiki": "https://de.wikipedia.org/wiki/Wasserstoffatom"
+                },
+                {
+                    "img": "",
+                    "text": "Der Atomradius des Helium Atoms beträgt 31 pm; das 1s2 Orbital ist voll besetzt.",
+                    "wiki": "https://de.wikipedia.org/wiki/Heliumatom"
+                },
+                {
+                    "img": "",
+                    "text": "Periodensystem der Elemente",
+                    "wiki": "https://de.wikipedia.org/wiki/Periodensystem"
+                },
+                {
+                    "img": "",
+                    "text": "Isotope",
+                    "wiki": "https://de.wikipedia.org/wiki/Isotop"
+                },
+                {
+                    "img": "",
+                    "text": "Atomorbital",
+                    "wiki": "https://de.wikipedia.org/wiki/Atomorbital"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-12</sup> m = 1 pm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Atome</div>
+            <div class="card-desc">Anorganische Chemie</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Chemische Verbindungen: Moleküle, ionische Salze, Kristalle, Metalle, Komplexe",
+                    "wiki": "https://de.wikipedia.org/wiki/Chemische_Verbindung"
+                },
+                {
+                    "img": "",
+                    "text": "Chemische Bindung",
+                    "wiki": "https://de.wikipedia.org/wiki/Chemische_Bindung"
+                },
+                {
+                    "img": "",
+                    "text": "Kovalenter Radius",
+                    "wiki": "https://de.wikipedia.org/wiki/Kovalenter_Radius"
+                },
+                {
+                    "img": "",
+                    "text": "Bindungslänge",
+                    "wiki": "https://de.wikipedia.org/wiki/Bindungsl%C3%A4nge"
+                },
+                {
+                    "img": "",
+                    "text": "Die C-C Einfachbindung hat eine Länge von 154 pm",
+                    "wiki": "https://de.wikipedia.org/wiki/Kovalente_Bindung"
+                },
+                {
+                    "img": "",
+                    "text": "O2, CO2, H2O",
+                    "wiki": "https://de.wikipedia.org/wiki/Eigenschaften_des_Wassers"
+                },
+                {
+                    "img": "",
+                    "text": "Isomerie: Konstitution, Stereochemie: Konformation, Konfiguration, Diastereomere, Enantiomere (Chiralität)",
+                    "wiki": "https://de.wikipedia.org/wiki/Isomerie"
+                },
+                {
+                    "img": "",
+                    "text": "Elektronenmikroskop: Die Auflösung moderner Transmissionselektronenmikroskope (TEM) beträgt 50 bis 200 pm",
+                    "wiki": "https://de.wikipedia.org/wiki/Elektronenmikroskop"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-10</sup> m = 1 Angström = 100 pm = 0,1 nm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Moleküle</div>
+            <div class="card-desc">Organische Chemie</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Proteine und Enzyme bestehen aus einer Sequenz von Aminosäuren. Durch Wechselwirkungen werden sie dreidimensional im Raum gefaltet, um ihre biologische Aufgabe zu erfüllen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Protein"
+                },
+                {
+                    "img": "",
+                    "text": "DNA speichert die Erbinformation; spezielle Bereiche werden abgelesen (Promoter), um die Information in mRNA (messanger~) zu Transcribieren (Abschreiben). Die mRNA wird aus dem Zellkern zu den Ribosomen geschleust, um die Translation in Proteine zu ermöglichen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Desoxyribonukleins%C3%A4ure"
+                },
+                {
+                    "img": "",
+                    "text": "mRNA",
+                    "wiki": "https://de.wikipedia.org/wiki/MRNA"
+                },
+                {
+                    "img": "",
+                    "text": "Genetischer Code: 4 Nukleinsäure-Basen codieren in Tripletts die 20 proteinogenen Aminosäuren",
+                    "wiki": "https://de.wikipedia.org/wiki/Genetischer_Code"
+                },
+                {
+                    "img": "",
+                    "text": "Genexpression: Das menschliche Genom enthält ca. 25.000 Gene, welche zusammenarbeiten, um etwa 1.000.000 verschiedene Proteine zu erzeugen. Diese Vielfalt entsteht hauptsächlich durch posttranslationale Modifikationen, so dass ein einzelnes Gen als Vorlage für viele verschiedene Versionen eines Proteins dienen kann.",
+                    "wiki": "https://de.wikipedia.org/wiki/Genexpression"
+                },
+                {
+                    "img": "",
+                    "text": "Genexpressionsanalyse",
+                    "wiki": "https://de.wikipedia.org/wiki/Genexpressionsanalyse"
+                },
+                {
+                    "img": "",
+                    "text": "Pharmakologische Targets im menschlichen Organismus",
+                    "wiki": "http://floppyinfant.com/targets/"
+                },
+                {
+                    "img": "",
+                    "text": "Photosynthese: Lichtenergie wird mithilfe von Farbstoffen in chemische Energie umgewandelt. Diese wird dann genutzt, um aus CO2 und H2O energiereiche organische Verbindungen (Kohlenhydrate) aufzubauen. Als Abfallprodukt fällt Sauerstoff an. Aus dem Sauerstoff entsteht die schützende Ozonschicht der Erdatmosphäre.",
+                    "wiki": "https://de.wikipedia.org/wiki/Photosynthese"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-9</sup> m = 1 nm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Makromoleküle</div>
+            <div class="card-desc">Biochemie</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Viren haben eine Größe von 20 bis 400 nm",
+                    "wiki": "https://de.wikipedia.org/wiki/Viren"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-8</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Viren</div>
+            <div class="card-desc">Infektiologie und Hygiene, Mikrobiologie, Virologie</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Bakterien haben eine Größe von 500 nm bis 5 μm",
+                    "wiki": "https://de.wikipedia.org/wiki/Einzeller"
+                },
+                {
+                    "img": "",
+                    "text": "Lichtmikroskope: Die Auflösungsgrenze der Lichtmikroskopie (Abbe-Limit) beträgt 200 bis 500 nm",
+                    "wiki": "https://de.wikipedia.org/wiki/Lichtmikroskop"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-7</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Einzeller</div>
+            <div class="card-desc">Mikrobiologie</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Die Zelle",
+                    "wiki": "https://de.wikipedia.org/wiki/Zelle_(Biologie)"
+                },
+                {
+                    "img": "",
+                    "text": "Prokaryonten sind Bakterien und Archaeen. Die DNA befindet sich nicht in einem Zellkern, sondern frei im Zytoplasma.",
+                    "wiki": "https://de.wikipedia.org/wiki/Prokaryoten"
+                },
+                {
+                    "img": "",
+                    "text": "Eukaryotische Zellen haben einen Zellkern. Mehrzellige Lebewesen umfassen die Tiere, Pflanzen und Pilze.",
+                    "wiki": "https://de.wikipedia.org/wiki/Eukaryoten"
+                },
+                {
+                    "img": "",
+                    "text": "Zellorganellen",
+                    "wiki": "https://de.wikipedia.org/wiki/Organell"
+                },
+                {
+                    "img": "",
+                    "text": "Mitochondrium",
+                    "wiki": "https://de.wikipedia.org/wiki/Mitochondrium"
+                },
+                {
+                    "img": "",
+                    "text": "Der Zellkern der menschlichen Zelle enthält 23 Chromosomen-Paare (davon 2 Geschlechts-Chromosomen: XX oder Xy) mit kompaktierter DNA (um Histone aufgewickelt). Würde man die DNA entwirren und in einer Linie aufreihen, wäre sie 2 m lang.",
+                    "wiki": "https://de.wikipedia.org/wiki/Zellkern"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-6</sup> m = 1 μm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Zellorganellen</div>
+            <div class="card-desc">Zellbiologie</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Zellen: Omnipotente Stammzellen differenzieren sich zu spezialisierten Zellen und bilden Gewebe, Organe, Organismen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Zelltyp"
+                },
+                {
+                    "img": "",
+                    "text": "Nervenzelle",
+                    "wiki": "https://de.wikipedia.org/wiki/Nervenzelle"
+                },
+                {
+                    "img": "",
+                    "text": "Ein menschliches Gehirn enthält etwa 100 Billionen (10^14) Synapsen. Diese Synapsen sind die Verbindungsstellen zwischen den etwa 86 Milliarden Nervenzellen (Neuronen) im Gehirn. Die Anzahl der Synapsen, die ein einzelnes Neuron ausbildet, kann stark variieren, von wenigen bis zu über 100.000, wobei der Durchschnitt bei etwa 1000 liegt.",
+                    "wiki": "https://de.wikipedia.org/wiki/Neuronales_Netz"
+                },
+                {
+                    "img": "",
+                    "text": "Das Nervensystem des Menschen gliedert sich in das Zentralnervensystem (Gehirn, Rückenmark) und das periphere Nervensystem. Weiterhin werden das somatische (willkürliche) und das autonome Nervensystem (auch Vegetatives~ oder Viscerales~) unterschieden.",
+                    "wiki": "https://de.wikipedia.org/wiki/Nervensystem"
+                },
+                {
+                    "img": "",
+                    "text": "Somatisches (willkürliches) Nervensystem : Afferenzen sind die aufsteigenden Bahnen (Wahrnehmung von Sinnes-Reizen). Efferenzen sind motorische Nervenfasern zur ansteuerung der quergestreiften Muskulatur sowie Pyramidenbahnen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Somatisches_Nervensystem"
+                },
+                {
+                    "img": "",
+                    "text": "Das autonome | vegetative | viscerale Nervensystems ist unterteilt in sympathisches, parasympathisches und enterisches NS.",
+                    "wiki": "https://de.wikipedia.org/wiki/Vegetatives_Nervensystem"
+                },
+                {
+                    "img": "",
+                    "text": "Der Sympathikus wird vor allem in Stress-Situationen aktiviert: Fight (Kampf), Flight (Flucht), Frigt (Angststarre). Neurotransmitter in den Ganglien des Sympathikus ist Acetylcholin, die Übertragung auf das Zielorgan erfolgt mittels Noradrenalin.",
+                    "wiki": "https://de.wikipedia.org/wiki/Sympathikus"
+                },
+                {
+                    "img": "",
+                    "text": "Der Parasympathikus ist Gegenspieler des Sympathikus. Neurotransmitter ist Acetylcholin, das an zwei Typen von Rezeptoren wirkt: Nikotinischen Rezeptoren (nAChR) und muskarinischen Rezeptoren (mAChR): M2 im Herzen, M3 in glatter Muskulatur im Verdauungstrackt.",
+                    "wiki": "https://de.wikipedia.org/wiki/Parasympathikus"
+                },
+                {
+                    "img": "",
+                    "text": "Enterisches Nervensystem: Der Bauch hat sein eigenes Gehirn :-)",
+                    "wiki": "https://de.wikipedia.org/wiki/Enterisches_Nervensystem"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-5</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Zellen</div>
+            <div class="card-desc">Zellbiologie</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-4</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Gewebe</div>
+            <div class="card-desc">Medizin: Physiologie, Pathophysiologie, Histologie</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Makrofotografie",
+                    "wiki": "https://de.wikipedia.org/wiki/Makrofotografie"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-3</sup> m = 1 mm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Makrofotografie</div>
+            <div class="card-desc">Insekten</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Flora: Pflanzen",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "Fauna: Tierwelt",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "Evolution",
+                    "wiki": "https://de.wikipedia.org/wiki/Evolution"
+                },
+                {
+                    "img": "",
+                    "text": "Phylogenetischer Baum",
+                    "wiki": "https://de.wikipedia.org/wiki/Phylogenetischer_Baum"
+                },
+                {
+                    "img": "",
+                    "text": "Artenvielfalt: Diversität",
+                    "wiki": "https://de.wikipedia.org/wiki/Artenvielfalt"
+                },
+                {
+                    "img": "",
+                    "text": "Massenaussterben",
+                    "wiki": "https://de.wikipedia.org/wiki/Massenaussterben"
+                },
+                {
+                    "img": "",
+                    "text": "Dinosaurier",
+                    "wiki": "https://de.wikipedia.org/wiki/Dinosaurier"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-2</sup> m = 1 cm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Flora und Fauna</div>
+            <div class="card-desc">Biologie</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Fische",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "Amphibien",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "Reptilien",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "Vögel",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "Säugetiere",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>-1</sup> m = 1 dm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">... einige Tierarten</div>
+            <div class="card-desc"></div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Menschen",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "Sprache, Schrift, Forschung, Wissen(schaft)",
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "Werkzeuge: Metall, Bergbau, Dampfmaschine, Fließband / Arbeitsteilung / Spezialisierung, Ökonomie (Handel, Geld), Mechanik, Elektronik, Computer, Internet, Smartphones, AI",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "Zivilisation",
+                    "wiki": "https://de.wikipedia.org/wiki/Sozialisation"
+                },
+                {
+                    "img": "",
+                    "text": "Kunst, Musik, Literatur",
+                    "wiki": "https://de.wikipedia.org/wiki/Kultur"
+                },
+                {
+                    "img": "",
+                    "text": "Geschichte",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "Jäger & Sammler, Ackerbau, Industrielle Revolution, Landflucht, Wissensgesellschaft, Dienstleistungen ",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>0</sup> m = 1 m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Mensch</div>
+            <div class="card-desc">Kultur und Technik</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>1</sup> m = 10 m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Bäume, Gebäude, Maschinen</div>
+            <div class="card-desc">Architektur, Maschinenbau</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Architektur",
+                    "wiki": "https://de.wikipedia.org/wiki/Architektur"
+                },
+                {
+                    "img": "",
+                    "text": "Hochhäuser",
+                    "wiki": "https://de.wikipedia.org/wiki/Hochhaus"
+                },
+                {
+                    "img": "",
+                    "text": "Skyscraper",
+                    "wiki": "https://de.wikipedia.org/wiki/Liste_der_h%C3%B6chsten_Hochh%C3%A4user_der_Welt"
+                },
+                {
+                    "img": "",
+                    "text": "Städte",
+                    "wiki": "https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_st%C3%A4dtischen_Siedlungen_der_Welt"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>2</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Architektur</div>
+            <div class="card-desc">Gebäude und Städte</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Geographie",
+                    "wiki": "https://de.wikipedia.org/wiki/Geographie"
+                },
+                {
+                    "img": "",
+                    "text": "Geologie",
+                    "wiki": "https://de.wikipedia.org/wiki/Geologie"
+                },
+                {
+                    "img": "",
+                    "text": "Tiefsee",
+                    "wiki": "https://de.wikipedia.org/wiki/Tiefsee"
+                },
+                {
+                    "img": "",
+                    "text": "Gebirge",
+                    "wiki": "https://de.wikipedia.org/wiki/Gebirge"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>3</sup> m = 1 km</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Geographie</div>
+            <div class="card-desc"></div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Atmosphäre",
+                    "wiki": "https://de.wikipedia.org/wiki/Erdatmosph%C3%A4re"
+                },
+                {
+                    "img": "",
+                    "text": "Wolken",
+                    "wiki": "https://de.wikipedia.org/wiki/Wolke"
+                },
+                {
+                    "img": "",
+                    "text": "Wetter",
+                    "wiki": "https://de.wikipedia.org/wiki/Wetter"
+                },
+                {
+                    "img": "",
+                    "text": "Luftfahrt",
+                    "wiki": "https://de.wikipedia.org/wiki/Luftfahrt"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>4</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Atmosphäre</div>
+            <div class="card-desc">Wetter, Wolken, Luftfahrt</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Raumfahrt",
+                    "wiki": "https://de.wikipedia.org/wiki/Raumfahrt"
+                },
+                {
+                    "img": "",
+                    "text": "Eine Rakete benötigt eine Flucht-Geschwindigkeit von 40.000 km/h (=11km/s), um die Erdanziehung zu überwinden.",
+                    "wiki": "https://de.wikipedia.org/wiki/Rakete"
+                },
+                {
+                    "img": "",
+                    "text": "Triebwerk",
+                    "wiki": "https://de.wikipedia.org/wiki/Raketentriebwerk"
+                },
+                {
+                    "img": "",
+                    "text": "Satellit",
+                    "wiki": "https://de.wikipedia.org/wiki/Satellit_(Raumfahrt)"
+                },
+                {
+                    "img": "",
+                    "text": "Satelitten im Low-Earth-Orbit (LEO) in 500 bis 800 km Höhe",
+                    "wiki": "https://de.wikipedia.org/wiki/Satellitenorbit"
+                },
+                {
+                    "img": "",
+                    "text": "ISS-Raumstation im Low-Earth-Orbit (LEO), Umlaufzeit 1,5 bis 2h",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "Hubbel Weltraumteleskop in 490 km Höhe. Spiegeldurchmesser 2,4 m. 1990",
+                    "wiki": "https://de.wikipedia.org/wiki/Hubble-Weltraumteleskop"
+                },
+                {
+                    "img": "",
+                    "text": "James Webb Space Teleskope (JWST) für Infrarot. Spiegeldurchmesser 6,5 m. Umlaufbahn um den 1,5 Mio. km von der Erde entfernten Lagrange-Punkt L2. 2022",
+                    "wiki": "https://de.wikipedia.org/wiki/James-Webb-Weltraumteleskop"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>5</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Erdumlaufbahn</div>
+            <div class="card-desc">Satelitten (Höhe über NN)</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Erdradius 6.370 km",
+                    "wiki": "https://de.wikipedia.org/wiki/Innerer_Aufbau_der_Erde"
+                },
+                {
+                    "img": "",
+                    "text": "Durchmesser der Erde: 12.742 km",
+                    "wiki": "https://de.wikipedia.org/wiki/Erde"
+                },
+                {
+                    "img": "",
+                    "text": "Position der Erde im Universum",
+                    "wiki": "https://de.wikipedia.org/wiki/Position_der_Erde_im_Universum"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>6</sup> m = 1 Mm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Erde</div>
+            <div class="card-desc">Planet Earth</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Astronomie und Astrophysik",
+                    "wiki": "https://de.wikipedia.org/wiki/Astronomie"
+                },
+                {
+                    "img": "",
+                    "text": "Teleskope: Apochromat, Newton, Schmitt-Cassegrain, Dobson; parallaktische (äquatoriale) Montierung",
+                    "wiki": "https://de.wikipedia.org/wiki/Teleskop"
+                },
+                {
+                    "img": "",
+                    "text": "Astrofotografie",
+                    "wiki": "https://de.wikipedia.org/wiki/Astrofotografie"
+                },
+                {
+                    "img": "",
+                    "text": "Sternwarte",
+                    "wiki": "https://de.wikipedia.org/wiki/Sternwarte"
+                },
+                {
+                    "img": "",
+                    "text": "Radioteleskop",
+                    "wiki": "https://de.wikipedia.org/wiki/Radioteleskop"
+                },
+                {
+                    "img": "",
+                    "text": "Medium-Earth-Orbit (MEO): 10.000 bis 20.000 km, Umlaufzeit 4 bis 12h",
+                    "wiki": "https://de.wikipedia.org/wiki/Satellitenorbit"
+                },
+                {
+                    "img": "",
+                    "text": "Geostationary-Earth-Orbit (GEO): 36.000 km, Umlaufzeit 24h",
+                    "wiki": "https://de.wikipedia.org/wiki/Satellitenorbit"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>7</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Astronomie</div>
+            <div class="card-desc"></div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Mond: Entfernung von der Erde ca. 400.000 km",
+                    "wiki": "https://de.wikipedia.org/wiki/Mond"
+                },
+                {
+                    "img": "",
+                    "text": "Sonnen-Radius als Maßeinheit: 6,957 x 10<sup>8</sup> m = 695.000 km",
+                    "wiki": "https://de.wikipedia.org/wiki/Sonnenradius"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>8</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Mond</div>
+            <div class="card-desc">Entfernung des Mondes und Sonnenradius (Objektgröße)</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Sonne: Durchmesser 1.392.000 km, Entfernung ca. 150.000.000 km = 1 Astronomische Einheit [AU]",
+                    "wiki": "https://de.wikipedia.org/wiki/Sonne"
+                },
+                {
+                    "img": "",
+                    "text": "Magnetosphäre der Erde (Erdmagnetfeld): 63.000 bis 6,3 Mio. km",
+                    "wiki": "https://de.wikipedia.org/wiki/Erdmagnetfeld"
+                },
+                {
+                    "img": "",
+                    "text": "James Webb Space Teleskope (JWST) für Infrarot. Spiegeldurchmesser 6,5 m. Umlaufbahn um den 1,5 Mio. km von der Erde entfernten Lagrange-Punkt L2. 2022",
+                    "wiki": "https://de.wikipedia.org/wiki/James-Webb-Weltraumteleskop"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>9</sup> m = 1 Gm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Sonne</div>
+            <div class="card-desc">Durchmesser der Sonne, Magnetosphäre der Erde, JWST Orbit</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Sonne: Durchmesser 1.392.000 km, Entfernung ca. 150.000.000 km = 1 Astronomische Einheit [AU]",
+                    "wiki": "https://de.wikipedia.org/wiki/Sonne"
+                },
+                {
+                    "img": "Merkur",
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/Merkur_(Planet)"
+                },
+                {
+                    "img": "",
+                    "text": "Venus",
+                    "wiki": "https://de.wikipedia.org/wiki/Venus_(Planet)"
+                },
+                {
+                    "img": "",
+                    "text": "Mars 54,6 Mio. km",
+                    "wiki": "https://de.wikipedia.org/wiki/Mars_(Planet)"
+                },
+                {
+                    "img": "",
+                    "text": "Asteroidengürtel 2 bis 3.4 AU von der Sonne",
+                    "wiki": "https://de.wikipedia.org/wiki/Asteroideng%C3%BCrtel"
+                },
+                {
+                    "img": "",
+                    "text": "Jupiter (Durchmesser 142.000 km): 778 Mio. km Entfernung von der Sonne",
+                    "wiki": "https://de.wikipedia.org/wiki/Jupiter_(Planet)"
+                },
+                {
+                    "img": "",
+                    "text": "Saturn",
+                    "wiki": "https://de.wikipedia.org/wiki/Saturn_(Planet)"
+                },
+                {
+                    "img": "",
+                    "text": "Uranus",
+                    "wiki": "https://de.wikipedia.org/wiki/Uranus_(Planet)"
+                },
+                {
+                    "img": "",
+                    "text": "Neptun",
+                    "wiki": "https://de.wikipedia.org/wiki/Neptun_(Planet)"
+                },
+                {
+                    "img": "",
+                    "text": "Kuipergürtel (mit Pluto)",
+                    "wiki": "https://de.wikipedia.org/wiki/Kuiperg%C3%BCrtel"
+                },
+                {
+                    "img": "",
+                    "text": "Ekliptik",
+                    "wiki": "https://de.wikipedia.org/wiki/Ekliptik"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>10</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Planeten</div>
+            <div class="card-desc">Entfernungen in unserem Sonnensystem</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Der Abstand der Erde zur Sonne beträgt 1 Astronomische Einheit (AU) = 150 Mio. km",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>11</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Astronomische Einheit</div>
+            <div class="card-desc">150 Mio. km</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Sterne: Die Milchstraße hat mindestens 100 Mrd. Sterne. Sie ist eine von etwa 1 Billion Galaxien.",
+                    "wiki": "https://de.wikipedia.org/wiki/Stern"
+                },
+                {
+                    "img": "",
+                    "text": "Rigel (Stern im Orion) hat einen Radius von 62 Sonnenradien = 43 Mio. km",
+                    "wiki": "https://de.wikipedia.org/wiki/Rigel"
+                },
+                {
+                    "img": "",
+                    "text": "Beteigeuze (Roter-Über-Riese im Sternbild Orion) hat einen Radius von 760 Sonnenradien = 528 Mio. km; er ist in der Kategorie Roter-Über-Riese.",
+                    "wiki": "https://de.wikipedia.org/wiki/Beteigeuze"
+                },
+                {
+                    "img": "",
+                    "text": "Granatstern: Radius 972 Sonnenradien",
+                    "wiki": "https://de.wikipedia.org/wiki/Granatstern"
+                },
+                {
+                    "img": "",
+                    "text": "VV Cephei A: 1050 Sonneradien",
+                    "wiki": "https://de.wikipedia.org/wiki/VV_Cephei"
+                },
+                {
+                    "img": "",
+                    "text": "VY Canis Majoris",
+                    "wiki": "https://de.wikipedia.org/wiki/VY_Canis_Majoris"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>12</sup> m = 1 Tm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Sterne</div>
+            <div class="card-desc">Objektgrößen</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Heliopause: 100 AU = 15 Mrd. km",
+                    "wiki": "https://de.wikipedia.org/wiki/Sonnensystem"
+                },
+                {
+                    "img": "",
+                    "text": "Raumsonde Voyager: 22 Mrd. km (nach 40 Jahren). Sie ist das am weitesten entfernte, menschengemachte Objekt.",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>13</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Heliopause</div>
+            <div class="card-desc">Voyager-1</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Oort Cloud: 1000 AU bis 100.000 AU",
+                    "wiki": "https://de.wikipedia.org/wiki/Oortsche_Wolke"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>14</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Oorthsche Wolke</div>
+            <div class="card-desc">Oorth Cloud</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>15</sup> m = 1 Pm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title"></div>
+            <div class="card-desc"></div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Alpha Centauri: 4,25 LJ (= 276.000 AU) ist das nächstgelegene Sonnensystem.",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "1 Lichtjahr [ly] = 9.460.730.472.580.800 m = 9,46e15 m = 63.241 AE = 0,3066 pc",
+                    "wiki": "https://de.wikipedia.org/wiki/Lichtjahr"
+                },
+                {
+                    "img": "",
+                    "text": "1 Parsec [pc] = 3,26 LJ = 206.265 AE = 30,9 Billionen km (3.09e16 Meter = 30,9 Petameter)",
+                    "wiki": "http://de.wikipedia.org/wiki/Parsec"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>16</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Alpha Centauri</div>
+            <div class="card-desc">nächstgelegenes Sonnensystem</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- --------------------------------------------------------------------------------------------------------- -->
+
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>17</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title"></div>
+            <div class="card-desc"></div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "human radio bubble; 100 ly; Außerhalb dieses Radius gibt es keine Spuren, dass Menschen überhaupt gelebt haben.",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                },
+                {
+                    "img": "",
+                    "text": "Plejaden: 444 ly",
+                    "wiki": "https://de.wikipedia.org/wiki/Plejaden"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>18</sup> m = 1 Em</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Human Radio Bubble</div>
+            <div class="card-desc">100 ly</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Orion-Nebel (M42) in einer Entfernung von 1.350 ly hat einen Durchmesser von 24 ly.",
+                    "wiki": "https://de.wikipedia.org/wiki/Orionnebel"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>19</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title"></div>
+            <div class="card-desc"></div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Entfernung zum Zentrum der Milchstraße (Sagittarius A*): 26.700 ly",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>20</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Zentrum der Milchstraße</div>
+            <div class="card-desc">Entfernung</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Durchmesser der Milchstraße: 100.000 ly; Die Galaxie beinhaltet mindestens 100 Mrd. Sternen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Milchstra%C3%9Fe"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>21</sup> m = 1 Zm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Milchstraße</div>
+            <div class="card-desc">Durchmesser</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Andromeda Galaxy: Entfernung 2,5 Mio. ly; Sie ist die nächstgelegene Galaxie.",
+                    "wiki": "https://de.wikipedia.org/wiki/Andromedagalaxie"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>22</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Andromeda Galaxy</div>
+            <div class="card-desc">Entfernung zur Nachbargalaxie</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Durchmesser der Local Group: 10 Mio. ly; Die Local Group ist ein Cluster mit 50 Galaxien.",
+                    "wiki": "https://de.wikipedia.org/wiki/Lokale_Gruppe"
+                },
+                {
+                    "img": "",
+                    "text": "Galaxiengruppe",
+                    "wiki": "https://de.wikipedia.org/wiki/Galaxiengruppe"
+                },
+                {
+                    "img": "",
+                    "text": "Galaxienhaufen (Virgo Cluster)",
+                    "wiki": "https://de.wikipedia.org/wiki/Virgo-Galaxienhaufen"
+                },
+                {
+                    "img": "",
+                    "text": "Superhaufen (Virgo Super Cluster)",
+                    "wiki": "https://de.wikipedia.org/wiki/Virgo-Superhaufen"
+                },
+                {
+                    "img": "",
+                    "text": "Laniakea Supercluster (mit 100.000 Galaxien)",
+                    "wiki": "https://de.wikipedia.org/wiki/Laniakea"
+                },
+                {
+                    "img": "",
+                    "text": "Filamente (ca. 5% des Universums)",
+                    "wiki": "https://de.wikipedia.org/wiki/Filament_(Kosmos)"
+                },
+                {
+                    "img": "",
+                    "text": "Void: 95% des Weltraums ist Nichts (void), ausgefüllt vom Interstellaren Medium und der kosmischen Hintergrundstrahlung.",
+                    "wiki": "https://de.wikipedia.org/wiki/Struktur_des_Kosmos"
+                },
+                {
+                    "img": "",
+                    "text": "Interstellares Medium: Der Weltraum ist kein perfektes Vakuum. Er ist erfüllt von einer extrem dünnen Mischung aus Gasen (99%, v.a. Wasserstoff, Helium) und Staub (1%, Silikate, Graphit, Wassereis).",
+                    "wiki": "https://de.wikipedia.org/wiki/Interstellares_Medium"
+                },
+                {
+                    "img": "",
+                    "text": "Struktur des Kosmos",
+                    "wiki": "https://de.wikipedia.org/wiki/Struktur_des_Kosmos"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>23</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Local Group</div>
+            <div class="card-desc">Durchmesser des Galaxien-Clusters</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>24</sup> m = 1 Ym</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title"></div>
+            <div class="card-desc"></div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>25</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title"></div>
+            <div class="card-desc"></div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "TON 618: Entfernung 10 Mrd. ly; TON618 ist ein Schwarzes Loch mit 66 Mrd. Sonnenmassen.",
+                    "wiki": "https://de.wikipedia.org/wiki/TON_618"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>26</sup> m</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">TON618</div>
+            <div class="card-desc">Massereiches Schwarzes Loch</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+        <!-- Karte 0: Template -->
+        <div class="scale-card" 
+             data-bg="#020408" 
+             data-subcards='[
+                {
+                    "img": "",
+                    "text": "Das beobachtbare Universum (The obserable Universe) hat einen Durchmesser von 93 Mrd. Lichtjahren und expandiert mit Überlichtgeschwindigkeit. Sein Alter beträgt 13,8 Mrd. Jahre.",
+                    "wiki": "https://en.wikipedia.org/wiki/Observable_universe"
+                },
+                {
+                    "img": "",
+                    "text": "Expansion des Universums mit Über-Lichtgeschwindigkeit",
+                    "wiki": "https://de.wikipedia.org/wiki/Expansion_des_Universums"
+                },
+                {
+                    "img": "",
+                    "text": "Kosmische Hintergrundstrahlung: Das „Nachglühen des Urknalls“, heute im Mikrowellen-Bereich erfüllt jeden Kubikzentimeter des Weltraums. Die Temperatur liegt heute bei etwa -270,4 °C == 2,7 Kelvin.",
+                    "wiki": "https://de.wikipedia.org/wiki/Hintergrundstrahlung"
+                },
+                {
+                    "img": "",
+                    "text": "Kosmischer Kalender",
+                    "wiki": "https://de.wikipedia.org/wiki/Kosmischer_Kalender"
+                },
+                {
+                    "img": "",
+                    "text": "Astrophysik. Die Gesamtmasse des beobachtbaren Universums beträgt etwa 1,5 x 10<sup>53</sup> kg. Es enthält etwa 10<sup>80</sup> Atome. Masse = Energie (E=mc<sup>2</sup>). Subatomare Teilchen + Antiteilchen entstehen aus Energie. Diese bilden Atomkerne und bilden mit Elektronen die Elemente.",
+                    "wiki": "https://de.wikipedia.org/wiki/Astrophysik"
+                },
+                {
+                    "img": "",
+                    "text": "Kosmochemie",
+                    "wiki": "https://de.wikipedia.org/wiki/Kosmochemie"
+                },
+                {
+                    "img": "",
+                    "text": "Allgemeine Relativitätstheorie",
+                    "wiki": "https://de.wikipedia.org/wiki/Relativit%C3%A4tstheorie"
+                }
+             ]'>
+            <div class="exponent-badge">10<sup>27</sup> m = 1 Rm</div>
+            <img class="card-image" src="" alt="">
+            <div class="card-title">Das beobachtbare Universum</div>
+            <div class="card-desc">Astrophysik</div>
+            <!-- Die Punkte werden automatisch per JS generiert -->
+            <div class="card-indicator-dots"></div>
+        </div>
+      
+      <!-- Karten Ende -->
+      </div>
+    </div>
+
+    <!-- POP-UP OVERLAY TEMPLATE -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            
+            <!-- Firefox Fix: Geändert von <button> zu <span> und an oberste Stelle gesetzt -->
+            <span class="close-btn" id="closeBtn">&times;</span>
+            
+            <div class="modal-header-wrapper">
+                <h2 id="modalTitle">Titel</h2>
+                <div class="exponent-badge" id="modalBadge">10<sup>0</sup> m</div>
+            </div>
+            <div class="gallery-viewer" id="galleryViewer">
+                <button class="nav-arrow arrow-left" id="prevBtn">&#10094;</button>
+                <img class="gallery-img" id="modalImg" src="" alt="Unterkarte">
+                <button class="nav-arrow arrow-right" id="nextBtn">&#10095;</button>
+            </div>
+            <p class="modal-long-desc" id="modalDesc"></p>
+            <div class="modal-footer">
+                <span class="card-counter" id="modalCounter">1 / 1</span>
+                <a href="#" id="modalWikiLink" target="_blank" class="wiki-link">Wikipedia &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+  </section>
+
+  <!-- About Section ------------------------------------------------------------------ -->
+
+  <section id="about" class="relative z-5 py-24 px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div class="fade-in">
+          <span class="font-mono text-sm text-space-accent uppercase tracking-wider">Unsere Mission</span>
+          <h2 class="text-3xl md:text-5xl font-bold mt-3 mb-6">Capturing the Invisible</h2>
+          <p class="text-gray-400 leading-relaxed mb-6">
+            Deep Sky Astrophotography verbindet den Menschen mit der Natur und offenbart eine weitere verborgene Facette der Existenz. Mit heutigen technischen Hilfsmitteln, die zwar im Inneren komplex, aber für die breite Masse einfach zu bedienen sind, kann das Unerreichbare sichtbar gemacht werden. 
+          </p>
+          <p class="text-gray-400 leading-relaxed mb-10">
+            Am Anfang benötigt der interessierte Amateur Astonom nur zwei Dinge: Die offenen Augen zum Himmel gerichtet.
+          </p>
+          
+          <div class="grid grid-cols-3 gap-8">
+            <div class="fade-in" style="transition-delay: 100ms">
+              <div class="text-3xl md:text-4xl font-bold text-space-gold font-mono mb-1">19+</div>
+              <div class="text-sm text-gray-500">Images Captured</div>
+            </div>
+            <div class="fade-in" style="transition-delay: 200ms">
+              <div class="text-3xl md:text-4xl font-bold text-space-gold font-mono mb-1">15+h</div>
+              <div class="text-sm text-gray-500">Total Exposure</div>
+            </div>
+            <div class="fade-in" style="transition-delay: 300ms">
+              <div class="text-3xl md:text-4xl font-bold text-space-gold font-mono mb-1">23M</div>
+              <div class="text-sm text-gray-500">Light Years</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative fade-in">
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-space-800 border border-space-700 shadow-2xl">
+            <img src="pics/Canon_Grueninger_Warte.jpg" alt="Place_at_night" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition duration-700">
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-space-800 p-5 rounded-xl border border-space-700 shadow-xl">
+            <i data-lucide="aperture" class="w-8 h-8 text-space-accent"></i>
+          </div>
+          <div class="absolute -top-6 -right-6 bg-space-800 p-5 rounded-xl border border-space-700 shadow-xl hidden md:block">
+            <i data-lucide="star" class="w-8 h-8 text-space-gold"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pages End ---------------------------------------------------------------------- -->
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-space-700 bg-space-900/80 py-12 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-2">
+        <i data-lucide="telescope" class="w-6 h-6 text-space-accent"></i>
+        <span class="font-bold text-lg">Deep Sky</span>
+      </div>
+      <p class="text-gray-600 text-sm text-center">
+        © 2026 Deep Sky Astrophotography. Powered by DeepSite.
+      </p>
+      <!--
+      <div class="flex gap-4">
+        <a href="#" class="p-2 text-gray-500 hover:text-white hover:bg-space-700 rounded-lg transition">
+          <i data-lucide="instagram" class="w-5 h-5"></i>
+        </a>
+        <a href="#" class="p-2 text-gray-500 hover:text-white hover:bg-space-700 rounded-lg transition">
+          <i data-lucide="twitter" class="w-5 h-5"></i>
+        </a>
+        <a href="#" class="p-2 text-gray-500 hover:text-white hover:bg-space-700 rounded-lg transition">
+          <i data-lucide="youtube" class="w-5 h-5"></i>
+        </a>
+      </div>
+      -->
+    </div>
+  </footer>
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Photogallery Items and others (Star Animation, NASA POTD, Dimensions) -->
+  <script src="script.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+                    "text": "Max Planck erkannte 1899, dass mit der von ihm entdeckten Konstante h in Verbindung mit der Gravitationskonstante und der Lichtgeschwindigkeit Maßeinheiten für Länge, Zeit und Masse definiert werden können - für alle Zeiten und für alle, auch ausserirdische und aussermenschliche Culturen",
+                    "wiki": "https://de.wikipedia.org/wiki/Planck-L%C3%A4nge"
+                    "text": "Grundkräfte der Physik: Gravitation, Elektromagnetische Wechselwirkung, Schwache und Starke Wechselwirkung",
+                    "wiki": "https://de.wikipedia.org/wiki/Fundamentale_Wechselwirkung"
+                    "text": "Quentenmechanik",
+                    "wiki": "https://de.wikipedia.org/wiki/Quantenmechanik"
+                    "text": "Quantengravitation",
+                    "wiki": "https://de.wikipedia.org/wiki/Gravitationswelle"
+                    "text": "String-Theorie: ... aufgerollte Dimensionen ... Weltformel",
+                    "wiki": "https://de.wikipedia.org/wiki/Stringtheorie"
+                    "text": "Fermionen (Quarks, Leptonen), Bosonen",
+                    "wiki": "https://de.wikipedia.org/wiki/Elementarteilchen"
+                    "text": "Quarks",
+                    "wiki": "https://de.wikipedia.org/wiki/Quark_(Physik)"
+                    "text": "Elektron",
+                    "wiki": "https://de.wikipedia.org/wiki/Elektron"
+                    "text": "Photon",
+                    "wiki": "https://de.wikipedia.org/wiki/Photon"
+                    "text": "Antiteilchen",
+                    "wiki": "https://de.wikipedia.org/wiki/Antiteilchen"
+                    "text": "Die Grenze des Meßbaren liegt bei 100 Attometer (1 am = 10<sup>-18</sup> m); darunter gibt es nur Schätzungen und Hypothesen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Liste_von_Gr%C3%B6%C3%9Fenordnungen_der_L%C3%A4nge"
+                    "text": "Subatomare Teilchen sind die Elementarteilchen (z.B. Quarks, Elektron, Photon) sowie zusammengestzte Teilchen (Baryonen, Nukleonen: z.B. Proton, Neutron)",
+                    "wiki": "https://de.wikipedia.org/wiki/Subatomares_Teilchen"
+                    "text": "Proton: Durchmesser 1,7 fm",
+                    "wiki": "https://de.wikipedia.org/wiki/Proton"
+                    "text": "Neutron",
+                    "wiki": "https://de.wikipedia.org/wiki/Neutron"
+                    "text": "Der Atomkern ist 20.000 bis 150.000 mal kleiner als die Atomhülle, hat aber 99,9% der Masse.",
+                    "wiki": "https://de.wikipedia.org/wiki/Atomkern"
+                    "text": "Kernspin: NMR (nuclear magnetic resonance), CT (Computer Tomographie), MRT (Magnetresonanztomographie) in der Medizin",
+                    "wiki": "https://de.wikipedia.org/wiki/Kernspinresonanz"
+                    "text": "Radioaktivität",
+                    "wiki": "https://de.wikipedia.org/wiki/Radioaktivit%C3%A4t"
+                    "text": "Kernreaktion",
+                    "wiki": "https://de.wikipedia.org/wiki/Kernreaktion"
+                    "text": "Kernspaltung",
+                    "wiki": "https://de.wikipedia.org/wiki/Kernspaltung"
+                    "text": "Kernfusion",
+                    "wiki": "https://de.wikipedia.org/wiki/Kernfusion"
+                    "text": "Materie",
+                    "wiki": "https://de.wikipedia.org/wiki/Materie_(Physik)"
+                    "text": "Atom",
+                    "wiki": "https://de.wikipedia.org/wiki/Atomradius"
+                    "text": "Der Atomradius des Wasserstoffatoms beträgt 53 pm",
+                    "wiki": "https://de.wikipedia.org/wiki/Wasserstoffatom"
+                    "text": "Der Atomradius des Helium Atoms beträgt 31 pm; das 1s2 Orbital ist voll besetzt.",
+                    "wiki": "https://de.wikipedia.org/wiki/Heliumatom"
+                    "text": "Periodensystem der Elemente",
+                    "wiki": "https://de.wikipedia.org/wiki/Periodensystem"
+                    "text": "Isotope",
+                    "wiki": "https://de.wikipedia.org/wiki/Isotop"
+                    "text": "Atomorbital",
+                    "wiki": "https://de.wikipedia.org/wiki/Atomorbital"
+                    "text": "Chemische Verbindungen: Moleküle, ionische Salze, Kristalle, Metalle, Komplexe",
+                    "wiki": "https://de.wikipedia.org/wiki/Chemische_Verbindung"
+                    "text": "Chemische Bindung",
+                    "wiki": "https://de.wikipedia.org/wiki/Chemische_Bindung"
+                    "text": "Kovalenter Radius",
+                    "wiki": "https://de.wikipedia.org/wiki/Kovalenter_Radius"
+                    "text": "Bindungslänge",
+                    "wiki": "https://de.wikipedia.org/wiki/Bindungsl%C3%A4nge"
+                    "text": "Die C-C Einfachbindung hat eine Länge von 154 pm",
+                    "wiki": "https://de.wikipedia.org/wiki/Kovalente_Bindung"
+                    "text": "O2, CO2, H2O",
+                    "wiki": "https://de.wikipedia.org/wiki/Eigenschaften_des_Wassers"
+                    "text": "Isomerie: Konstitution, Stereochemie: Konformation, Konfiguration, Diastereomere, Enantiomere (Chiralität)",
+                    "wiki": "https://de.wikipedia.org/wiki/Isomerie"
+                    "text": "Elektronenmikroskop: Die Auflösung moderner Transmissionselektronenmikroskope (TEM) beträgt 50 bis 200 pm",
+                    "wiki": "https://de.wikipedia.org/wiki/Elektronenmikroskop"
+                    "text": "Proteine und Enzyme bestehen aus einer Sequenz von Aminosäuren. Durch Wechselwirkungen werden sie dreidimensional im Raum gefaltet, um ihre biologische Aufgabe zu erfüllen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Protein"
+                    "text": "DNA speichert die Erbinformation; spezielle Bereiche werden abgelesen (Promoter), um die Information in mRNA (messanger~) zu Transcribieren (Abschreiben). Die mRNA wird aus dem Zellkern zu den Ribosomen geschleust, um die Translation in Proteine zu ermöglichen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Desoxyribonukleins%C3%A4ure"
+                    "text": "mRNA",
+                    "wiki": "https://de.wikipedia.org/wiki/MRNA"
+                    "text": "Genetischer Code: 4 Nukleinsäure-Basen codieren in Tripletts die 20 proteinogenen Aminosäuren",
+                    "wiki": "https://de.wikipedia.org/wiki/Genetischer_Code"
+                    "text": "Genexpression: Das menschliche Genom enthält ca. 25.000 Gene, welche zusammenarbeiten, um etwa 1.000.000 verschiedene Proteine zu erzeugen. Diese Vielfalt entsteht hauptsächlich durch posttranslationale Modifikationen, so dass ein einzelnes Gen als Vorlage für viele verschiedene Versionen eines Proteins dienen kann.",
+                    "wiki": "https://de.wikipedia.org/wiki/Genexpression"
+                    "text": "Genexpressionsanalyse",
+                    "wiki": "https://de.wikipedia.org/wiki/Genexpressionsanalyse"
+                    "text": "Pharmakologische Targets im menschlichen Organismus",
+                    "wiki": "http://floppyinfant.com/targets/"
+                    "text": "Photosynthese: Lichtenergie wird mithilfe von Farbstoffen in chemische Energie umgewandelt. Diese wird dann genutzt, um aus CO2 und H2O energiereiche organische Verbindungen (Kohlenhydrate) aufzubauen. Als Abfallprodukt fällt Sauerstoff an. Aus dem Sauerstoff entsteht die schützende Ozonschicht der Erdatmosphäre.",
+                    "wiki": "https://de.wikipedia.org/wiki/Photosynthese"
+                    "text": "Viren haben eine Größe von 20 bis 400 nm",
+                    "wiki": "https://de.wikipedia.org/wiki/Viren"
+                    "text": "Bakterien haben eine Größe von 500 nm bis 5 μm",
+                    "wiki": "https://de.wikipedia.org/wiki/Einzeller"
+                    "text": "Lichtmikroskope: Die Auflösungsgrenze der Lichtmikroskopie (Abbe-Limit) beträgt 200 bis 500 nm",
+                    "wiki": "https://de.wikipedia.org/wiki/Lichtmikroskop"
+                    "text": "Die Zelle",
+                    "wiki": "https://de.wikipedia.org/wiki/Zelle_(Biologie)"
+                    "text": "Prokaryonten sind Bakterien und Archaeen. Die DNA befindet sich nicht in einem Zellkern, sondern frei im Zytoplasma.",
+                    "wiki": "https://de.wikipedia.org/wiki/Prokaryoten"
+                    "text": "Eukaryotische Zellen haben einen Zellkern. Mehrzellige Lebewesen umfassen die Tiere, Pflanzen und Pilze.",
+                    "wiki": "https://de.wikipedia.org/wiki/Eukaryoten"
+                    "text": "Zellorganellen",
+                    "wiki": "https://de.wikipedia.org/wiki/Organell"
+                    "text": "Mitochondrium",
+                    "wiki": "https://de.wikipedia.org/wiki/Mitochondrium"
+                    "text": "Der Zellkern der menschlichen Zelle enthält 23 Chromosomen-Paare (davon 2 Geschlechts-Chromosomen: XX oder Xy) mit kompaktierter DNA (um Histone aufgewickelt). Würde man die DNA entwirren und in einer Linie aufreihen, wäre sie 2 m lang.",
+                    "wiki": "https://de.wikipedia.org/wiki/Zellkern"
+                    "text": "Zellen: Omnipotente Stammzellen differenzieren sich zu spezialisierten Zellen und bilden Gewebe, Organe, Organismen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Zelltyp"
+                    "text": "Nervenzelle",
+                    "wiki": "https://de.wikipedia.org/wiki/Nervenzelle"
+                    "text": "Ein menschliches Gehirn enthält etwa 100 Billionen (10^14) Synapsen. Diese Synapsen sind die Verbindungsstellen zwischen den etwa 86 Milliarden Nervenzellen (Neuronen) im Gehirn. Die Anzahl der Synapsen, die ein einzelnes Neuron ausbildet, kann stark variieren, von wenigen bis zu über 100.000, wobei der Durchschnitt bei etwa 1000 liegt.",
+                    "wiki": "https://de.wikipedia.org/wiki/Neuronales_Netz"
+                    "text": "Das Nervensystem des Menschen gliedert sich in das Zentralnervensystem (Gehirn, Rückenmark) und das periphere Nervensystem. Weiterhin werden das somatische (willkürliche) und das autonome Nervensystem (auch Vegetatives~ oder Viscerales~) unterschieden.",
+                    "wiki": "https://de.wikipedia.org/wiki/Nervensystem"
+                    "text": "Somatisches (willkürliches) Nervensystem : Afferenzen sind die aufsteigenden Bahnen (Wahrnehmung von Sinnes-Reizen). Efferenzen sind motorische Nervenfasern zur ansteuerung der quergestreiften Muskulatur sowie Pyramidenbahnen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Somatisches_Nervensystem"
+                    "text": "Das autonome | vegetative | viscerale Nervensystems ist unterteilt in sympathisches, parasympathisches und enterisches NS.",
+                    "wiki": "https://de.wikipedia.org/wiki/Vegetatives_Nervensystem"
+                    "text": "Der Sympathikus wird vor allem in Stress-Situationen aktiviert: Fight (Kampf), Flight (Flucht), Frigt (Angststarre). Neurotransmitter in den Ganglien des Sympathikus ist Acetylcholin, die Übertragung auf das Zielorgan erfolgt mittels Noradrenalin.",
+                    "wiki": "https://de.wikipedia.org/wiki/Sympathikus"
+                    "text": "Der Parasympathikus ist Gegenspieler des Sympathikus. Neurotransmitter ist Acetylcholin, das an zwei Typen von Rezeptoren wirkt: Nikotinischen Rezeptoren (nAChR) und muskarinischen Rezeptoren (mAChR): M2 im Herzen, M3 in glatter Muskulatur im Verdauungstrackt.",
+                    "wiki": "https://de.wikipedia.org/wiki/Parasympathikus"
+                    "text": "Enterisches Nervensystem: Der Bauch hat sein eigenes Gehirn :-)",
+                    "wiki": "https://de.wikipedia.org/wiki/Enterisches_Nervensystem"
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Makrofotografie",
+                    "wiki": "https://de.wikipedia.org/wiki/Makrofotografie"
+                    "text": "Flora: Pflanzen",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Fauna: Tierwelt",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Evolution",
+                    "wiki": "https://de.wikipedia.org/wiki/Evolution"
+                    "text": "Phylogenetischer Baum",
+                    "wiki": "https://de.wikipedia.org/wiki/Phylogenetischer_Baum"
+                    "text": "Artenvielfalt: Diversität",
+                    "wiki": "https://de.wikipedia.org/wiki/Artenvielfalt"
+                    "text": "Massenaussterben",
+                    "wiki": "https://de.wikipedia.org/wiki/Massenaussterben"
+                    "text": "Dinosaurier",
+                    "wiki": "https://de.wikipedia.org/wiki/Dinosaurier"
+                    "text": "Fische",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Amphibien",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Menschen",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Werkzeuge: Metall, Bergbau, Dampfmaschine, Fließband / Arbeitsteilung / Spezialisierung, Ökonomie (Handel, Geld), Mechanik, Elektronik, Computer, Internet, Smartphones, AI",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Zivilisation",
+                    "wiki": "https://de.wikipedia.org/wiki/Sozialisation"
+                    "text": "Kunst, Musik, Literatur",
+                    "wiki": "https://de.wikipedia.org/wiki/Kultur"
+                    "text": "Geschichte",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Jäger & Sammler, Ackerbau, Industrielle Revolution, Landflucht, Wissensgesellschaft, Dienstleistungen ",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Architektur",
+                    "wiki": "https://de.wikipedia.org/wiki/Architektur"
+                    "text": "Hochhäuser",
+                    "wiki": "https://de.wikipedia.org/wiki/Hochhaus"
+                    "text": "Skyscraper",
+                    "wiki": "https://de.wikipedia.org/wiki/Liste_der_h%C3%B6chsten_Hochh%C3%A4user_der_Welt"
+                    "text": "Städte",
+                    "wiki": "https://de.wikipedia.org/wiki/Liste_der_gr%C3%B6%C3%9Ften_st%C3%A4dtischen_Siedlungen_der_Welt"
+                    "text": "Geographie",
+                    "wiki": "https://de.wikipedia.org/wiki/Geographie"
+                    "text": "Geologie",
+                    "wiki": "https://de.wikipedia.org/wiki/Geologie"
+                    "text": "Tiefsee",
+                    "wiki": "https://de.wikipedia.org/wiki/Tiefsee"
+                    "text": "Gebirge",
+                    "wiki": "https://de.wikipedia.org/wiki/Gebirge"
+                    "text": "Atmosphäre",
+                    "wiki": "https://de.wikipedia.org/wiki/Erdatmosph%C3%A4re"
+                    "text": "Wolken",
+                    "wiki": "https://de.wikipedia.org/wiki/Wolke"
+                    "text": "Wetter",
+                    "wiki": "https://de.wikipedia.org/wiki/Wetter"
+                    "text": "Luftfahrt",
+                    "wiki": "https://de.wikipedia.org/wiki/Luftfahrt"
+                    "text": "Raumfahrt",
+                    "wiki": "https://de.wikipedia.org/wiki/Raumfahrt"
+                    "text": "Eine Rakete benötigt eine Flucht-Geschwindigkeit von 40.000 km/h (=11km/s), um die Erdanziehung zu überwinden.",
+                    "wiki": "https://de.wikipedia.org/wiki/Rakete"
+                    "text": "Triebwerk",
+                    "wiki": "https://de.wikipedia.org/wiki/Raketentriebwerk"
+                    "text": "Satellit",
+                    "wiki": "https://de.wikipedia.org/wiki/Satellit_(Raumfahrt)"
+                    "text": "Satelitten im Low-Earth-Orbit (LEO) in 500 bis 800 km Höhe",
+                    "wiki": "https://de.wikipedia.org/wiki/Satellitenorbit"
+                    "text": "ISS-Raumstation im Low-Earth-Orbit (LEO), Umlaufzeit 1,5 bis 2h",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Hubbel Weltraumteleskop in 490 km Höhe. Spiegeldurchmesser 2,4 m. 1990",
+                    "wiki": "https://de.wikipedia.org/wiki/Hubble-Weltraumteleskop"
+                    "text": "James Webb Space Teleskope (JWST) für Infrarot. Spiegeldurchmesser 6,5 m. Umlaufbahn um den 1,5 Mio. km von der Erde entfernten Lagrange-Punkt L2. 2022",
+                    "wiki": "https://de.wikipedia.org/wiki/James-Webb-Weltraumteleskop"
+                    "text": "Erdradius 6.370 km",
+                    "wiki": "https://de.wikipedia.org/wiki/Innerer_Aufbau_der_Erde"
+                    "text": "Durchmesser der Erde: 12.742 km",
+                    "wiki": "https://de.wikipedia.org/wiki/Erde"
+                    "text": "Position der Erde im Universum",
+                    "wiki": "https://de.wikipedia.org/wiki/Position_der_Erde_im_Universum"
+                    "text": "Astronomie und Astrophysik",
+                    "wiki": "https://de.wikipedia.org/wiki/Astronomie"
+                    "text": "Teleskope: Apochromat, Newton, Schmitt-Cassegrain, Dobson; parallaktische (äquatoriale) Montierung",
+                    "wiki": "https://de.wikipedia.org/wiki/Teleskop"
+                    "text": "Astrofotografie",
+                    "wiki": "https://de.wikipedia.org/wiki/Astrofotografie"
+                    "text": "Sternwarte",
+                    "wiki": "https://de.wikipedia.org/wiki/Sternwarte"
+                    "text": "Radioteleskop",
+                    "wiki": "https://de.wikipedia.org/wiki/Radioteleskop"
+                    "text": "Medium-Earth-Orbit (MEO): 10.000 bis 20.000 km, Umlaufzeit 4 bis 12h",
+                    "wiki": "https://de.wikipedia.org/wiki/Satellitenorbit"
+                    "text": "Geostationary-Earth-Orbit (GEO): 36.000 km, Umlaufzeit 24h",
+                    "wiki": "https://de.wikipedia.org/wiki/Satellitenorbit"
+                    "text": "Mond: Entfernung von der Erde ca. 400.000 km",
+                    "wiki": "https://de.wikipedia.org/wiki/Mond"
+                    "text": "Sonnen-Radius als Maßeinheit: 6,957 x 10<sup>8</sup> m = 695.000 km",
+                    "wiki": "https://de.wikipedia.org/wiki/Sonnenradius"
+                    "text": "Sonne: Durchmesser 1.392.000 km, Entfernung ca. 150.000.000 km = 1 Astronomische Einheit [AU]",
+                    "wiki": "https://de.wikipedia.org/wiki/Sonne"
+                    "text": "Magnetosphäre der Erde (Erdmagnetfeld): 63.000 bis 6,3 Mio. km",
+                    "wiki": "https://de.wikipedia.org/wiki/Erdmagnetfeld"
+                    "text": "James Webb Space Teleskope (JWST) für Infrarot. Spiegeldurchmesser 6,5 m. Umlaufbahn um den 1,5 Mio. km von der Erde entfernten Lagrange-Punkt L2. 2022",
+                    "wiki": "https://de.wikipedia.org/wiki/James-Webb-Weltraumteleskop"
+                    "text": "Sonne: Durchmesser 1.392.000 km, Entfernung ca. 150.000.000 km = 1 Astronomische Einheit [AU]",
+                    "wiki": "https://de.wikipedia.org/wiki/Sonne"
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/Merkur_(Planet)"
+                    "text": "Venus",
+                    "wiki": "https://de.wikipedia.org/wiki/Venus_(Planet)"
+                    "text": "Mars 54,6 Mio. km",
+                    "wiki": "https://de.wikipedia.org/wiki/Mars_(Planet)"
+                    "text": "Asteroidengürtel 2 bis 3.4 AU von der Sonne",
+                    "wiki": "https://de.wikipedia.org/wiki/Asteroideng%C3%BCrtel"
+                    "text": "Jupiter (Durchmesser 142.000 km): 778 Mio. km Entfernung von der Sonne",
+                    "wiki": "https://de.wikipedia.org/wiki/Jupiter_(Planet)"
+                    "text": "Saturn",
+                    "wiki": "https://de.wikipedia.org/wiki/Saturn_(Planet)"
+                    "text": "Uranus",
+                    "wiki": "https://de.wikipedia.org/wiki/Uranus_(Planet)"
+                    "text": "Neptun",
+                    "wiki": "https://de.wikipedia.org/wiki/Neptun_(Planet)"
+                    "text": "Kuipergürtel (mit Pluto)",
+                    "wiki": "https://de.wikipedia.org/wiki/Kuiperg%C3%BCrtel"
+                    "text": "Ekliptik",
+                    "wiki": "https://de.wikipedia.org/wiki/Ekliptik"
+                    "text": "Der Abstand der Erde zur Sonne beträgt 1 Astronomische Einheit (AU) = 150 Mio. km",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Sterne: Die Milchstraße hat mindestens 100 Mrd. Sterne. Sie ist eine von etwa 1 Billion Galaxien.",
+                    "wiki": "https://de.wikipedia.org/wiki/Stern"
+                    "text": "Rigel (Stern im Orion) hat einen Radius von 62 Sonnenradien = 43 Mio. km",
+                    "wiki": "https://de.wikipedia.org/wiki/Rigel"
+                    "text": "Beteigeuze (Roter-Über-Riese im Sternbild Orion) hat einen Radius von 760 Sonnenradien = 528 Mio. km; er ist in der Kategorie Roter-Über-Riese.",
+                    "wiki": "https://de.wikipedia.org/wiki/Beteigeuze"
+                    "text": "Granatstern: Radius 972 Sonnenradien",
+                    "wiki": "https://de.wikipedia.org/wiki/Granatstern"
+                    "text": "VV Cephei A: 1050 Sonneradien",
+                    "wiki": "https://de.wikipedia.org/wiki/VV_Cephei"
+                    "text": "VY Canis Majoris",
+                    "wiki": "https://de.wikipedia.org/wiki/VY_Canis_Majoris"
+                    "text": "Heliopause: 100 AU = 15 Mrd. km",
+                    "wiki": "https://de.wikipedia.org/wiki/Sonnensystem"
+                    "text": "Raumsonde Voyager: 22 Mrd. km (nach 40 Jahren). Sie ist das am weitesten entfernte, menschengemachte Objekt.",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Oort Cloud: 1000 AU bis 100.000 AU",
+                    "wiki": "https://de.wikipedia.org/wiki/Oortsche_Wolke"
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Alpha Centauri: 4,25 LJ (= 276.000 AU) ist das nächstgelegene Sonnensystem.",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "1 Lichtjahr [ly] = 9.460.730.472.580.800 m = 9,46e15 m = 63.241 AE = 0,3066 pc",
+                    "wiki": "https://de.wikipedia.org/wiki/Lichtjahr"
+                    "text": "1 Parsec [pc] = 3,26 LJ = 206.265 AE = 30,9 Billionen km (3.09e16 Meter = 30,9 Petameter)",
+                    "wiki": "http://de.wikipedia.org/wiki/Parsec"
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "human radio bubble; 100 ly; Außerhalb dieses Radius gibt es keine Spuren, dass Menschen überhaupt gelebt haben.",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Plejaden: 444 ly",
+                    "wiki": "https://de.wikipedia.org/wiki/Plejaden"
+                    "text": "Orion-Nebel (M42) in einer Entfernung von 1.350 ly hat einen Durchmesser von 24 ly.",
+                    "wiki": "https://de.wikipedia.org/wiki/Orionnebel"
+                    "text": "Entfernung zum Zentrum der Milchstraße (Sagittarius A*): 26.700 ly",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "Durchmesser der Milchstraße: 100.000 ly; Die Galaxie beinhaltet mindestens 100 Mrd. Sternen.",
+                    "wiki": "https://de.wikipedia.org/wiki/Milchstra%C3%9Fe"
+                    "text": "Andromeda Galaxy: Entfernung 2,5 Mio. ly; Sie ist die nächstgelegene Galaxie.",
+                    "wiki": "https://de.wikipedia.org/wiki/Andromedagalaxie"
+                    "text": "Durchmesser der Local Group: 10 Mio. ly; Die Local Group ist ein Cluster mit 50 Galaxien.",
+                    "wiki": "https://de.wikipedia.org/wiki/Lokale_Gruppe"
+                    "text": "Galaxiengruppe",
+                    "wiki": "https://de.wikipedia.org/wiki/Galaxiengruppe"
+                    "text": "Galaxienhaufen (Virgo Cluster)",
+                    "wiki": "https://de.wikipedia.org/wiki/Virgo-Galaxienhaufen"
+                    "text": "Superhaufen (Virgo Super Cluster)",
+                    "wiki": "https://de.wikipedia.org/wiki/Virgo-Superhaufen"
+                    "text": "Laniakea Supercluster (mit 100.000 Galaxien)",
+                    "wiki": "https://de.wikipedia.org/wiki/Laniakea"
+                    "text": "Filamente (ca. 5% des Universums)",
+                    "wiki": "https://de.wikipedia.org/wiki/Filament_(Kosmos)"
+                    "text": "Void: 95% des Weltraums ist Nichts (void), ausgefüllt vom Interstellaren Medium und der kosmischen Hintergrundstrahlung.",
+                    "wiki": "https://de.wikipedia.org/wiki/Struktur_des_Kosmos"
+                    "text": "Interstellares Medium: Der Weltraum ist kein perfektes Vakuum. Er ist erfüllt von einer extrem dünnen Mischung aus Gasen (99%, v.a. Wasserstoff, Helium) und Staub (1%, Silikate, Graphit, Wassereis).",
+                    "wiki": "https://de.wikipedia.org/wiki/Interstellares_Medium"
+                    "text": "Struktur des Kosmos",
+                    "wiki": "https://de.wikipedia.org/wiki/Struktur_des_Kosmos"
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "",
+                    "wiki": "https://de.wikipedia.org/wiki/"
+                    "text": "TON 618: Entfernung 10 Mrd. ly; TON618 ist ein Schwarzes Loch mit 66 Mrd. Sonnenmassen.",
+                    "wiki": "https://de.wikipedia.org/wiki/TON_618"
+                    "text": "Das beobachtbare Universum (The obserable Universe) hat einen Durchmesser von 93 Mrd. Lichtjahren und expandiert mit Überlichtgeschwindigkeit. Sein Alter beträgt 13,8 Mrd. Jahre.",
+                    "wiki": "https://en.wikipedia.org/wiki/Observable_universe"
+                    "text": "Expansion des Universums mit Über-Lichtgeschwindigkeit",
+                    "wiki": "https://de.wikipedia.org/wiki/Expansion_des_Universums"
+                    "text": "Kosmische Hintergrundstrahlung: Das „Nachglühen des Urknalls“, heute im Mikrowellen-Bereich erfüllt jeden Kubikzentimeter des Weltraums. Die Temperatur liegt heute bei etwa -270,4 °C == 2,7 Kelvin.",
+                    "wiki": "https://de.wikipedia.org/wiki/Hintergrundstrahlung"
+                    "text": "Kosmischer Kalender",
+                    "wiki": "https://de.wikipedia.org/wiki/Kosmischer_Kalender"
+                    "text": "Astrophysik. Die Gesamtmasse des beobachtbaren Universums beträgt etwa 1,5 x 10<sup>53</sup> kg. Es enthält etwa 10<sup>80</sup> Atome. Masse = Energie (E=mc<sup>2</sup>). Subatomare Teilchen + Antiteilchen entstehen aus Energie. Diese bilden Atomkerne und bilden mit Elektronen die Elemente.",
+                    "wiki": "https://de.wikipedia.org/wiki/Astrophysik"
+                    "text": "Kosmochemie",
+                    "wiki": "https://de.wikipedia.org/wiki/Kosmochemie"
+                    "text": "Allgemeine Relativitätstheorie",
+                    "wiki": "https://de.wikipedia.org/wiki/Relativit%C3%A4tstheorie"

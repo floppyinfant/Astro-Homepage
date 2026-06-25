@@ -1,0 +1,49 @@
+# -----------------------------
+# OS-specific
+# -----------------------------
+.DS_Store
+Thumbs.db
+*.lnk
+
+# -----------------------------
+# Jetbrains IDEs
+# -----------------------------
+.idea/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/shelf/
+.idea/dictionaries/
+# keep these shareable project files (optional) if working in a team
+!.idea/codeStyles/
+!.idea/inspectionProfiles/
+!.idea/runConfigurations/
+#!.idea/.name
+#!.idea/vcs.xml
+
+# -----------------------------
+# Visual Studio IDE
+# -----------------------------
+.vs
+
+# -----------------------------
+# build directories
+# -----------------------------
+build/
+cmake-build-*/
+# Projucer files:
+Builds/
+JuceLibraryCode/
+
+# -----------------------------
+# Local libraries (not managed as submodules)
+# -----------------------------
+libs/sqlite
+libs_dsp/
+examples/
+
+# -----------------------------
+# local only temporary files
+# -----------------------------
+_local/
+*.zip

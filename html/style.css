@@ -1,0 +1,423 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0D17;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E2340;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6366F1;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(11, 13, 23, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Navbar Scrolled State */
+.nav-scrolled {
+  background: rgba(11, 13, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom-color: rgba(30, 35, 64, 0.8) !important;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Filter Button States */
+.filter-btn {
+  background: transparent;
+  color: #9CA3AF;
+}
+
+.filter-btn:hover {
+  background: #1E2340;
+  border-color: #2A3050;
+  color: #fff;
+}
+
+.filter-btn.active {
+  background: #6366F1;
+  color: white;
+  border-color: #6366F1;
+}
+
+/* Gallery Item Hover */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 0 0px rgba(99, 102, 241, 0);
+  transition: box-shadow 0.3s ease;
+  pointer-events: none;
+}
+
+.gallery-item:hover::after {
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+/* Lightbox */
+#lightbox {
+  transition: opacity 0.3s ease;
+}
+
+#lightbox img {
+  user-select: none;
+}
+
+/* Selection */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fff;
+}
+
+/* Smooth image loading */
+img {
+  transition: opacity 0.3s ease;
+}
+
+/* Style "Dimensions" (Timeline) ******************************************************** */
+
+:root {
+  --card-bg: rgba(22, 27, 34, 0.85);
+  --accent-color: #58a6ff;
+  --text-color: #c9d1d9;
+  --bg-current: #05070a;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-current);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.4s ease;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #fff;
+  margin-bottom: 5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+p.subtitle {
+  color: #8b949e;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Horizontaler Scroll-Bereich mit Touch-Optimierung */
+.scale-container {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 1300px;
+  overflow-x: auto;
+  padding: 20px 10px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) #161b22;
+  
+  position: relative;
+  z-index: 20;
+}
+
+/* Erzwingt sichtbare Scrollbar in Chrome, Safari, Edge */
+.scale-container::-webkit-scrollbar {
+  height: 6px;
+  display: block !important;
+}
+
+.scale-container::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+}
+
+.scale-card {
+  flex: 0 0 280px;
+  background-color: var(--card-bg);
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s, border-color 0.2s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  scroll-snap-align: center;
+}
+
+@media (hover: hover) {
+  .scale-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-color);
+  }
+
+  .scale-card:hover .indicator-dot {
+    background-color: #8b949e;
+  }
+}
+
+.exponent-badge {
+  background-color: rgba(88, 166, 255, 0.15);
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.card-image {
+  width: 100%;
+  height: 160px;
+  background-color: #21262d;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 10px 0 5px 0;
+  font-weight: 600;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  color: #8b949e;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.card-indicator-dots {
+  display: flex;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.indicator-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #30363d;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+/* Pop-up Overlay (Modal) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content { 
+    background-color: #161b22; 
+    border: 1px solid #30363d; 
+    border-radius: 20px; 
+    padding: 25px 20px 20px 20px; /* Oben auf 25px reduziert */
+    max-width: 650px; 
+    width: 92%; 
+    position: relative; 
+    transform: scale(0.85); 
+    transition: transform 0.3s ease; 
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6); 
+    box-sizing: border-box; 
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+/* .close-btn { 
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    font-size: 2.2rem; 
+    color: #8b949e; 
+    cursor: pointer; 
+    background: none; 
+    border: none; 
+    z-index: 1010;
+    padding: 5px;
+    line-height: 1;
+} 
+*/
+
+.close-btn { 
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    font-size: 2.2rem; 
+    color: #8b949e; 
+    cursor: pointer; 
+    z-index: 1020; /* Extrem hoch ansetzen */
+    padding: 5px;
+    line-height: 1;
+    user-select: none; /* Verhindert Textmarkierung */
+}
+.close-btn:hover { color: #fff; }
+
+
+.gallery-viewer {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  margin: 15px 0;
+  background-color: #0d1117;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  touch-action: pan-y;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: 1px solid #30363d;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+@media (min-width: 768px) {
+  .nav-arrow {
+    display: flex;
+  }
+
+  .gallery-viewer {
+    height: 320px;
+  }
+
+  body {
+    padding: 40px 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.arrow-left {
+  left: 15px;
+}
+
+.arrow-right {
+  right: 15px;
+}
+
+.modal-header-wrapper { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px solid #30363d; 
+    padding-bottom: 10px; 
+    padding-right: 40px; /* Auf 40px erhöht, schafft Platz für das X */
+}
+
+.modal-header-wrapper h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.modal-long-desc {
+  color: #c9d1d9;
+  line-height: 1.5;
+  margin-top: 12px;
+  font-size: 0.9rem;
+  min-height: 60px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid #21262d;
+}
+
+.card-counter {
+  font-size: 0.85rem;
+  color: #8b949e;
+  background-color: #21262d;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.wiki-link { display: inline-flex; align-items: center; color: var(--accent-color); text-decoration: none; font-weight: 500; font-size: 0.85rem; border-bottom: 1px dashed var(--accent-color); }
+
+/* Dimensions End *********************************************************************** */
+

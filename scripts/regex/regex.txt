@@ -1,0 +1,46 @@
+# wsl
+grep -E '^\s*"text": "(.*)"|"wiki": "(.*)"' index.html > ergebnis_grep.txt
+sed -n -E 's/^\s*"(text|wiki)":\s*"([^"]+)".*/\2/p' ergebnis_grep.txt > ergebnis.txt
+
+
+# -n: Gibt nur Zeilen aus, bei denen das Ersetzen geklappt hat (Filter-Funktion).
+# ([^\"]+): Sucht und speichert den variablen Inhalt innerhalb der Anführungszeichen.
+# \2: Ersetzt die gesamte Zeile ausschließlich durch diesen gespeicherten Inhalt.
+
+---
+
+# Notepad++
+# Strg+H  // Suchen & Ersetzen
+# Search Mode Regular Expressions
+
+
+---
+
+# VScode
+# Strg+H  // Replace
+# Alt+R  // use Regex (Symbol .*)
+
+
+---
+
+# Python
+
+# Dateipfade definieren
+input_file = "eingabe.html"
+output_file = "extrahiert.txt"
+
+# Filter-Begriffe definieren
+targets = ('"text": "wichtige_kommentar"', '"wiki": "wichtiger_link"')
+
+with open(input_file, "r", encoding="utf-8") as infile, open(
+    output_file, "w", encoding="utf-8"
+) as outfile:
+    for line in infile:
+        # lstrip() entfernt Leerzeichen/Tabs am Zeilenanfang
+        if line.lstrip().startswith(targets):
+            outfile.write(line)
+
+print("Extraktion erfolgreich abgeschlossen!")
+
+---
+
