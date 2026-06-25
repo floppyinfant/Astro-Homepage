@@ -113,9 +113,10 @@ Materie == Energie
 
 heute-am-himmel
 
--
+---
 
 https://scaleofuniverse.com/de
+
 https://en.wikipedia.org/wiki/The_Scale_of_the_Universe
 
 https://learn.genetics.utah.edu/content/cells/scale/
@@ -125,11 +126,14 @@ https://en.wikipedia.org/wiki/Cosmic_Eye
 https://youtu.be/pSHVbLPWA28
 
 https://pablocarlosbudassi.com/
+
 https://commons.wikimedia.org/wiki/File:Observable_Universe_Logarithmic_Map_(horizontal_layout_english_annotations_scale_bar).png
+
 https://commons.wikimedia.org/wiki/File:Observable_Universe_German_Annotations.png
+
 https://www.redbubble.com/i/photographic-print/VERTICAL-MAP-OF-THE-UNIVERSE-ENG-2024-Update-RECOMMENDED-by-pablocbudassi/37090437.Y8UA9 
 
--
+---
 
 Observatorien in Mittelhessen
 
@@ -150,27 +154,27 @@ Planetarium Mannheim
 AstroGC
 
 Astronomische Arbeitsgemeinschaft Heuchelheim (AAG)
-http://www.aag-heuchelheim.de/
-https://www.facebook.com/aagheuchelheim/
+- http://www.aag-heuchelheim.de/
+- https://www.facebook.com/aagheuchelheim/
 
 
 ## Apps
 
-Stellarium
-SkySafari
-PhotoPills
-Meteoblue
-Xasteria+, PS Align PW
-...
+- Stellarium
+- SkySafari
+- PhotoPills
+- Meteoblue
+- Xasteria+, PS Align PW
+- ...
 
-DWARF
-Seestar
-Deep Sky Camera (Android)
-AstroShader (iOS)
-Blackmagic Camera
+- DWARF
+- Seestar
+- Deep Sky Camera (Android)
+- AstroShader (iOS)
+- Blackmagic Camera
 
-NASA
-universe2go+
+- NASA
+- universe2go+
 
 ---
 
