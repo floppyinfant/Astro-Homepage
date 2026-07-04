@@ -28,9 +28,10 @@ Google CoLab
 - https://colab.research.google.com/
 
 
-Jupyter Notebook
+Jupyter
 - https://jupyter.org/
 
+Jupyter Notebook
 
 JupyterLab
 
