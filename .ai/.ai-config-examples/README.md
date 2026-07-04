@@ -21,12 +21,18 @@ VSCodium
 
 
 Jetbrains PyCharm
+- https://www.jetbrains.com/help/pycharm/getting-started.html
 
 
 Google CoLab
+- https://colab.research.google.com/
 
 
-Jupyter
+Jupyter Notebook
+- https://jupyter.org/
+
+
+JupyterLab
 
 
 ---
@@ -194,4 +200,5 @@ Model Context Protocol (MCP)
 
 
 ---
+
 
