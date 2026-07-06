@@ -70,9 +70,11 @@ JupyterLab
 ---
 
 ## Settings
+- https://code.visualstudio.com/docs/configure/settings
+
+~/.config/Code-OSS/User/settings.json
 
 .vscode/settings.json
-- https://code.visualstudio.com/docs/configure/settings
 
 ---
 
@@ -90,17 +92,23 @@ Models
 - https://www.designarena.ai/leaderboard
 
 
+## VScode Agents
+- https://code.visualstudio.com/docs/agents/agents-window
+- https://code.visualstudio.com/docs/chat/chat-tools
+
 ## Continue
 ~/.continue/config.yaml
 
 // docs
 - https://github.com/continuedev/continue/blob/main/README.md
+- https://docs.continue.dev/reference
 
 // models
 - https://docs.continue.dev/customize/models#recommended-models
 
-// chat
+// chat vs. agent
 - https://docs.continue.dev/ide-extensions/chat/model-setup
+- https://docs.continue.dev/ide-extensions/agent/how-it-works
 
 // autocomplete
 - https://docs.continue.dev/ide-extensions/autocomplete/quick-start
