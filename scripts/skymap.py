@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
+"""
+# Terminal
 # pip install astropy plotly pandas
-# AI Coding Assistant Gemini
+"""
 
 import numpy as np
 import pandas as pd
