@@ -3,6 +3,7 @@ Astronomy und Astrophotography Site
 
 Live Server (VScode Extension): 
 http://127.0.0.1:5500/html/index.html
+
 Open in Firefox F12 (Developer Tools): 
 Bildschirmgrößen testen (Ctrl + Shift + M) # right top Icon
 
@@ -17,19 +18,62 @@ Bildschirmgrößen testen (Ctrl + Shift + M) # right top Icon
 - SSL aktivieren (mit htaccess Weiterleiten)
 - Formelsammlung, Foto / Optik Begriffe (s.a. Space Koala, iPhone Fotos)
 
+Gallery
+- neue Bilder (optimieren 1920px)
+- Bildunterschriften
+
+Dimensionen
+- yottameter, attometer etc. ausschreiben
+- Bilder für Cards
+- Bilder für Subcards
+- Bildnachweis führen (copy embedded link, copa attribution)
+
+Section Sternkarte / POI
+- section anlegen
+- POI mit div verlay (siehe z.B. Physikerbild in wikimedia commons; suche andere Beispiele)
+
+Überschriften und Mission überarbeiten
+
+Icon (oben links): nicht DeepsSky, sondern ...
+
 ---
 
 # Website
 
 ## Favicon
 
+## Impressum
+
+siehe unten
+
+## Bildnachweise
+
+für "Dimensionen" (Space, Lenght, Orders of Magnitude, Scale of the Universe)
+
+siehe unten
+
+## Ladezeiten
+
+Ladezeiten beobachten, optimieren:
+- Bilder optimieren
+- andere Bilddateien embedden
+- sectionen später laden (lazy loading) oder auf andere Subpages aufteilen
+
+---
+
 ## Pages
 
-### [Catcher]
+### Slider
 
-Slider ?
+Animated 3D Video
+
+https://youtu.be/rWOcwRU11Fw
+
+https://zedastro.lovable.app/
 
 NASA Picture of the Day ?
+
+---
 
 ### Photo Gallery
 
@@ -280,6 +324,10 @@ ausserdem:
 - Personenrechte, Persönlichkeitsrechte (auf Fotos)
 - Urheberrechte (s. Bildnachweise)
 - Abmahnungen, Unterlassungsklagen, Schadenersatzforderungen
+
+---
+
+### Bildnachweise
 
 ---
 
