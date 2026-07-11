@@ -255,6 +255,46 @@ const galleryItems = [
     meta: "",
     desc_link: "https://de.wikipedia.org/wiki/Cirrusnebel",
     date: "2026-06-16"
+  },
+  {
+    id: 21,
+    title: "Andromeda Galaxy",
+    category: "galaxies",
+    src: "pics/M31_Andromeda-Galaxy_51m_Astro_2026-07-10.jpg",
+    description: "M31 - Die Andromedagalaxie ist mit rund 2,5 Mio. LJ Entfernung die am nächsten zur Milchstraße gelegene Spiralgalaxie. Sie ist zugleich das entfernteste Objekt, das unter guten Bedingungen ohne technische Hilfsmittel mit bloßem Auge beobachtet werden kann. Sie liegt im Sternbild Andromeda. Sie ist das größte Mitglied der Lokalen Gruppe, einer Ansammlung gravitativ gebundener Galaxien. Die Andromedagalaxie nähert sich mit einer Radialgeschwindigkeit von etwa 114 km/s und wird in 4 bis 10 Mrd. Jahren mit der Milchstraße kollidieren.",
+    meta: "",
+    desc_link: "https://de.wikipedia.org/wiki/Andromedagalaxie",
+    date: "2026-07-10"
+  },
+  {
+    id: 22,
+    title: "Milky Way Galaxy | Milchstraße",
+    category: "galaxies",
+    src: "pics/MilkyWay_2026-07-11.png",
+    description: "Die Milchstraße ist eine Balkenspiralgalaxie, die unser Sonnensystem enthält. Sie hat einen Durchmesser von etwa 100.000 Lichtjahren und eine Dicke von etwa 1.000 Lichtjahren. Die Milchstraße enthält zwischen 100 und 400 Milliarden Sterne.",
+    meta: "Sternbild Schwan",
+    desc_link: "https://de.wikipedia.org/wiki/Milchstraße",
+    date: "2026-07-11"
+  },
+  {
+    id: 23,
+    title: "Milky Way Galaxy | Milchstraße",
+    category: "galaxies",
+    src: "pics/MilkyWay-Adler_2026-07-11.png",
+    description: "Die Milchstraße ist eine Balkenspiralgalaxie, die unser Sonnensystem enthält. Sie hat einen Durchmesser von etwa 100.000 Lichtjahren und eine Dicke von etwa 1.000 Lichtjahren. Die Milchstraße enthält zwischen 100 und 400 Milliarden Sterne.",
+    meta: "Sternbild Adler (Aquila)",
+    desc_link: "https://de.wikipedia.org/wiki/Milchstraße",
+    date: "2026-07-11"
+  },
+  {
+    id: 24,
+    title: "Milky Way Galaxy | Milchstraße",
+    category: "galaxies",
+    src: "pics/MilkyWay-South_2026-07-11.png",
+    description: "Die Milchstraße ist eine Balkenspiralgalaxie, die unser Sonnensystem enthält. Sie hat einen Durchmesser von etwa 100.000 Lichtjahren und eine Dicke von etwa 1.000 Lichtjahren. Die Milchstraße enthält zwischen 100 und 400 Milliarden Sterne.",
+    meta: "Blick nach Süden, Richtung Sternbild Schütze (Sagittarius) und dem Zentrum der Milchstraße",
+    desc_link: "https://de.wikipedia.org/wiki/Milchstraße",
+    date: "2026-07-11"
   }
 ];
 

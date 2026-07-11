@@ -65,11 +65,14 @@ Ladezeiten beobachten, optimieren:
 
 ### Slider
 
-Animated 3D Video
+3D Star Field Generator (Animated 3D Video)
 
 https://youtu.be/rWOcwRU11Fw
 
 https://zedastro.lovable.app/
+
+https://zedastro.lovable.app/star-field-generator
+
 
 NASA Picture of the Day ?
 
