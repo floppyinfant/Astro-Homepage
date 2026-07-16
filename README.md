@@ -8,6 +8,29 @@ Open in Firefox F12 (Developer Tools):
 Bildschirmgrößen testen (Ctrl + Shift + M) # right top Icon
 
 
+# Alternativen
+
+## WordPress (WP)
+
+Block-Theme
+
+Elementor Editor Plugin
+
+FooGallery (Photo Gallery)
+
+### Themes
+
+- Space Exploration (paid)
+- Formula Dark
+- Coral Dark
+- Dark Photography
+
+## Piwigo
+
+## Zenphoto
+
+---
+
 # TODO - 2026-06-15
 
 - Footer: (c), Impressum, Bildnachweis
