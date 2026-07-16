@@ -18,12 +18,33 @@ Elementor Editor Plugin
 
 FooGallery (Photo Gallery)
 
+### Caveats
+
+docs.google.com
+
+- Site-Editor
+- Block-Editor
+- Elementor (Plugin)
+
+- Customizer (Anpassen)
+- Website bearbeiten
+- Seite bearbeiten
+
+- Template bearbeiten
+- Vorlage hinzufügen
+- Block hinzufügen
+
+- Global Style bearbeiten (theme.json)
+
 ### Themes
 
 - Space Exploration (paid)
 - Formula Dark
 - Coral Dark
 - Dark Photography
+
+- Recreate the NASA Website in WordPress
+- https://youtu.be/-afMM8ykemw 
 
 ## Piwigo
 
