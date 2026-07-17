@@ -297,6 +297,12 @@ const galleryItems = [
     date: "2026-07-11"
   }
 ];
+// TODO
+// https://de.wikipedia.org/wiki/Adlernebel mit "The Pillars of Creation (Säulen der Schöpfung)" (M16, NGC 6611) im Sternbild Schlange (Serpens) bei den Koordinaten 18h19m (Rektaszension) und −13°47' (Deklination).
+// https://de.wikipedia.org/wiki/Pferdekopfnebel IC434 im Sternbild Orion
+// https://de.wikipedia.org/wiki/Orionnebel
+
+// -------------------------------------------------------------------------------------
 
 let currentFilter = 'all';
 let currentLightboxIndex = 0;

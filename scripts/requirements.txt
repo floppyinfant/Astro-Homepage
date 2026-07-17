@@ -2,3 +2,5 @@ astropy
 starplot
 plotly
 ipyaladin
+sidecar
+regions
