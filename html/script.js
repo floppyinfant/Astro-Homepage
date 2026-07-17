@@ -297,6 +297,40 @@ const galleryItems = [
     date: "2026-07-11"
   }
 ];
+
+const hiresPathMap = {
+  'pics/M42_Orionnebel_Canon_415s_Siril_2026-03-05.jpg': 'pics-hires/M42_Orionnebel_Canon_415s_Siril_2026-03-05.jpg',
+  'pics/M31_Andromeda-Galaxy_Canon_668s_Siril_2026-03-12.jpg': 'pics-hires/M31_Andromeda-Galaxy_Canon_668s_Siril_2026-03-12.jpeg',
+  'pics/M45_Pleiades_Canon_408s_Siril_2026-03-12.jpg': 'pics-hires/M45_Pleiades_Canon_408s_Siril_2026-03-12.jpeg',
+  'pics/M44_Praesepe_Cluster_Bienenkorb_DWARF3_15m_Astro_StellarStudio_2026-04-23.jpg': 'pics-hires/M44_Praesepe_Cluster_Bienenkorb_DWARF3_15m_Astro_StellarStudio_2026-04-23.png',
+  'pics/M13_Herkuleshaufen_DWARF3_9m_Astro_Spike-Mask_StellarStudio_2026-05-10.jpg': 'pics-hires/M13_Herkuleshaufen_DWARF3_9m_Astro_Spike-Mask_StellarStudio_2026-05-10.png',
+  'pics/M51_Whirlpool_Galaxy_DWARF3_2h43m_Astro_StellarStudio_2026-05-09.jpg': 'pics-hires/M51_Whirlpool_Galaxy_DWARF3_2h43m_Astro_StellarStudio_2026-05-09.png',
+  'pics/M81_Bodes_Galaxy_DWARF3_1h50m_Duo_2026-04-21.jpg': 'pics-hires/M81_Bodes_Galaxy_DWARF3_1h50m_Duo_2026-04.png',
+  'pics/M57_Ring-Nebula_DWARF3_55m_Astro_StellarStudio_2026-05-10.jpg': 'pics-hires/M57_Ring-Nebula_DWARF3_55m_Astro_StellarStudio_2026-05-10.png',
+  'pics/Moon_DWARF3_StellarStudio_2026-04-22.jpg': 'pics-hires/Moon__DWARF3_StellarStudio_2026-04-22.png',
+  'pics/M101_Pinwheel_Galaxy_Feuerradgalaxie_DWARF3_1h19m_Astro_StellarStudio_2026-04-29.jpg': 'pics-hires/M101_Pinwheel_Galaxy_Feuerradgalaxie_DWARF3_1h19m_Astro_StellarStudio_2026-04-29.png',
+  'pics/M101_Pinwheel_Galaxy_Feuerradgalaxie_DWARF3_1h46m_Duo_StellarStudio_2026-04-29.jpg': 'pics-hires/M101_Pinwheel_Galaxy_Feuerradgalaxie_DWARF3_1h46m_Duo_StellarStudio_2026-04-29.png',
+  'pics/M97_Eulennebel_und_M108_DWARF3_2h6m_Astro_StellarStudio_2026-04-23.jpg': 'pics-hires/M97_Eulennebel_und_M108_DWARF3_2h6m_Astro_StellarStudio_2026-04-23.png',
+  'pics/Moon_DWARF3_StellaStudio_2026-05-01.jpg': 'pics-hires/Moon_DWARF3_StellaStudio_2026-05-01 11-00-10.png',
+  'pics/Sun_2026-04-22.jpg': 'pics-hires/Sun_2026-04-22.png',
+  'pics/IC1805_Herznebel_DWARF3_1h10m_VIS_StellarStudio_2026-04-24.jpg': 'pics-hires/IC1805_Herznebel_DWARF3_1h10m_VIS_StellarStudio_2026-04-24.png',
+  'pics/IC1848_Seelennebel_DWARF3_2h_Astro_StellarStudio_2026-04-24.jpg': 'pics-hires/IC1848_Seelennebel_DWARF3_2h_Astro_StellarStudio_2026-04-24.png',
+  'pics/M17_Omeganebel_DWARF3_22m_Astro_StellarStudio_2026-04-26.jpg': 'pics-hires/M17_Omeganebel_DWARF3_22m_Astro_StellarStudio_2026-04-26.png',
+  'pics/NGC7000_North-America-Nebula_DWARF3_55m_Duo_StellarStudio_2026-05-10.jpg': 'pics-hires/NGC7000_North-America-Nebula_DWARF3_55m_Duo_StellarStudio_2026-05-10.png',
+  'pics/NGC3628_Leo-Triplet_DWARF3_19m30s_StellarStudio_2026-05-01.jpg': 'pics-hires/NGC3628_Leo-Triplet_DWARF3_19m30s_StellarStudio_2026-05-01.png',
+  'pics/NGC6992_Schleiernebel_DWARF3_Astro_StellarStudio_2026-06-18b.jpg': 'pics-hires/NGC6992_Cirrusnebel_Veil_nebula_1h15m_Astro_2026-06-18b.png',
+  'pics/M31_Andromeda-Galaxy_51m_Astro_2026-07-10.jpg': 'pics-hires/M31_Andromeda-Galaxy_51m_Astro_2026-07-10.png',
+  'pics/MilkyWay_2026-07-11.jpg': 'pics-hires/MilkyWay_2026-07-11.png',
+  'pics/MilkyWay-Adler_2026-07-11.jpg': 'pics-hires/MilkyWay-Adler_2026-07-11.png',
+  'pics/MilkyWay-South_2026-07-11.jpg': 'pics-hires/MilkyWay-South_2026-07-11.png'
+};
+
+galleryItems.forEach((item) => {
+  if (!item.src_hires) {
+    item.src_hires = hiresPathMap[item.src] || item.src.replace(/^pics\//, 'pics-hires/').replace(/\.(jpg|jpeg)$/i, '.png');
+  }
+});
+
 // TODO
 // https://de.wikipedia.org/wiki/Adlernebel mit "The Pillars of Creation (Säulen der Schöpfung)" (M16, NGC 6611) im Sternbild Schlange (Serpens) bei den Koordinaten 18h19m (Rektaszension) und −13°47' (Deklination).
 // https://de.wikipedia.org/wiki/Pferdekopfnebel IC434 im Sternbild Orion
@@ -421,7 +455,19 @@ function openLightbox(id) {
 }
 
 function updateLightboxContent(item) {
-  document.getElementById('lightbox-img').src = item.src;
+  const lightboxImg = document.getElementById('lightbox-img');
+  const hiresSrc = item.src_hires || item.src;
+
+  lightboxImg.src = item.src;
+  lightboxImg.alt = item.title;
+  lightboxImg.style.cursor = hiresSrc && hiresSrc !== item.src ? 'zoom-in' : 'default';
+  lightboxImg.onclick = (event) => {
+    event.stopPropagation();
+    if (hiresSrc && hiresSrc !== item.src) {
+      window.open(hiresSrc, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   document.getElementById('lightbox-title').textContent = item.title;
   document.getElementById('lightbox-desc').textContent = item.description;
 
