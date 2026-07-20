@@ -637,6 +637,14 @@ function updateModalSlide() {
     modalDesc.innerHTML = currentSlide.text;  // Formatierungen im Text erlauben mit innerHTML statt innerText; data-subcards = '' in einfachen Anführungszeichen (im HTML-Code).
     modalWikiLink.href = currentSlide.wiki;
     modalCounter.innerText = `${currentSubcardIndex + 1} / ${subcardsArray.length}`;
+
+    if (currentSlide.attribution) {
+        modalImg.style.cursor = 'pointer';
+        modalImg.title = 'Attribution öffnen';
+    } else {
+        modalImg.style.cursor = '';
+        modalImg.title = '';
+    }
 }
 
 function nextSlide() {
@@ -660,6 +668,13 @@ window.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') nextSlide();
     else if (e.key === 'ArrowLeft') prevSlide();
     else if (e.key === 'Escape') modal.classList.remove('active');
+});
+
+modalImg.addEventListener('click', () => {
+    const currentSlide = subcardsArray[currentSubcardIndex];
+    if (currentSlide?.attribution) {
+        window.open(currentSlide.attribution, '_blank', 'noopener,noreferrer');
+    }
 });
 
 // 6. SMARTPHONE TOUCH-SWIPE LOGIK
