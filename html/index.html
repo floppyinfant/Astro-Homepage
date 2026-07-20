@@ -55,13 +55,15 @@
       <div class="flex items-center justify-between h-20">
         <div class="flex items-center gap-3">
           <i data-lucide="telescope" class="w-8 h-8 text-space-accent"></i>
-          <span class="font-bold text-xl tracking-tight">Deep Sky</span>
+          <span class="font-bold text-xl tracking-tight">Cosmos</span>
+          <!-- Kosmos, Universum / Weltall (Universe), Weltraum (Space): - Raum, Zeit, Materie und Energie. -->
         </div>
         
         <div class="hidden md:flex items-center gap-8">
           <a href="#home" class="text-sm font-medium text-gray-300 hover:text-white transition">Home</a>
-          <a href="#dimensions" class="text-sm font-medium text-gray-300 hover:text-white transition">Skala des Universums</a>
           <a href="#gallery" class="text-sm font-medium text-gray-300 hover:text-white transition">Fotogalerie</a>
+          <a href="#sky-map" class="text-sm font-medium text-gray-300 hover:text-white transition">Himmelskarte</a>
+          <a href="#dimensions" class="text-sm font-medium text-gray-300 hover:text-white transition">Dimension des Universums</a>
           <a href="#about" class="text-sm font-medium text-gray-300 hover:text-white transition">Über</a>
         </div>
 
@@ -75,7 +77,7 @@
     <div id="mobile-menu" class="hidden md:hidden glass border-t border-space-700">
       <div class="px-4 py-6 space-y-4">
         <a href="#home" class="block text-base font-medium text-gray-300 hover:text-white">Home</a>
-        <a href="#dimensions" class="block text-base font-medium text-gray-300 hover:text-white">Skala des Universums</a>
+        <a href="#dimensions" class="block text-base font-medium text-gray-300 hover:text-white">Dimension des Universums</a>
         <a href="#gallery" class="block text-base font-medium text-gray-300 hover:text-white">Fotogalerie</a>
         <a href="#about" class="block text-base font-medium text-gray-300 hover:text-white">Über</a>
       </div>
@@ -103,7 +105,7 @@
           <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
         </a>
         <a href="#dimensions" class="px-8 py-4 border border-white/20 rounded-full hover:bg-white/10 transition backdrop-blur-sm text-center">
-          Skala des Universums
+          Dimension des Universums
         </a>
       </div>
     </div>
@@ -211,7 +213,7 @@
     <!--  -->
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-6 fade-in">
-        <span class="font-mono text-sm text-space-accent uppercase tracking-wider">Orders of Magnitude</span>
+        <span class="font-mono text-sm text-space-accent uppercase tracking-wider">Dimension des Universums</span>
         <h2 class="section-title dimension-title text-3xl md:text-5xl font-bold mt-3 mb-4">
           <span>Vom Kleinsten zum Größten</span>
           <span class="dimension-title-break">und alles dazwischen</span>
@@ -1091,6 +1093,12 @@
              data-bg="#020408" 
              data-subcards='[
                 {
+                    "img": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Atmosphere_layers-de-3.svg",
+                    "attribution": "https://commons.wikimedia.org/wiki/File:Atmosphere_layers-de-3.svg",
+                    "text": "Die Kármán-Linie ist die international anerkannte, konventionelle Grenze zwischen der Erdatmosphäre und dem Weltraum. Sie liegt in 100 km Höhe über dem Meeresspiegel.",
+                    "wiki": "https://de.wikipedia.org/wiki/K%C3%A1rm%C3%A1n-Linie"
+                },
+                {
                     "img": "",
                     "attribution": "https://commons.wikimedia.org/wiki/File:",
                     "text": "Raumfahrt",
@@ -1151,16 +1159,16 @@
              data-bg="#020408" 
              data-subcards='[
                 {
-                    "img": "",
-                    "attribution": "https://commons.wikimedia.org/wiki/File:",
-                    "text": "Erdradius 6.370 km",
-                    "wiki": "https://de.wikipedia.org/wiki/Innerer_Aufbau_der_Erde"
+                    "img": "https://upload.wikimedia.org/wikipedia/commons/d/d6/AS08-16-2593_remastered.jpg",
+                    "attribution": "https://commons.wikimedia.org/wiki/File:AS08-16-2593_remastered.jpg",
+                    "text": "Planet Earth: Die Erde ist der einzige bekannte Planet, auf dem Leben existiert. Sie hat eine Atmosphäre, die aus Stickstoff (78 %), Sauerstoff (21 %) und anderen Gasen besteht.",
+                    "wiki": "https://de.wikipedia.org/wiki/Erde"
                 },
                 {
-                    "img": "",
-                    "attribution": "https://commons.wikimedia.org/wiki/File:",
-                    "text": "Durchmesser der Erde: 12.742 km",
-                    "wiki": "https://de.wikipedia.org/wiki/Erde"
+                    "img": "https://upload.wikimedia.org/wikipedia/commons/4/46/Aufbau_der_Erde_schematisch.svg",
+                    "attribution": "https://commons.wikimedia.org/wiki/File:Aufbau_der_Erde_schematisch.svg",
+                    "text": "Der Erdradius beträgt 6.370 km (Durchmesser 12.742 km). Die Erde ist ein Gesteinsplanet (Terrestrischer Planet) und besteht aus mehreren Schichten: Kruste (35 km), Mantel, äußerer Kern, innerer Kern.",
+                    "wiki": "https://de.wikipedia.org/wiki/Innerer_Aufbau_der_Erde"
                 },
                 {
                     "img": "",
@@ -1170,9 +1178,9 @@
                 }
              ]'>
             <div class="exponent-badge">10<sup>6</sup> m = 1 Mm</div>
-            <img class="card-image" src="" alt="">
+            <img class="card-image" src="https://upload.wikimedia.org/wikipedia/commons/d/d6/AS08-16-2593_remastered.jpg" alt="https://commons.wikimedia.org/wiki/File:AS08-16-2593_remastered.jpg">
             <div class="card-title">Erde</div>
-            <div class="card-desc">Planet Earth</div>
+            <div class="card-desc">Radius</div>
             <div class="card-indicator-dots"></div>
         </div>
 
@@ -1885,10 +1893,10 @@
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="flex items-center gap-2">
         <i data-lucide="telescope" class="w-6 h-6 text-space-accent"></i>
-        <span class="font-bold text-lg">Deep Sky</span>
+        <span class="font-bold text-lg">sudo ./aliens.exe</span>
       </div>
       <p class="text-gray-600 text-sm text-center">
-        © 2026 Deep Sky Astrophotography. Powered by DeepSite.
+        © 2026 floppyinfant
       </p>
       <!--
       <div class="flex gap-4">
