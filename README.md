@@ -20,7 +20,7 @@ FooGallery (Photo Gallery)
 
 ### Caveats
 
-docs.google.com
+@see docs.google.com
 
 - Site-Editor
 - Block-Editor
@@ -49,6 +49,54 @@ docs.google.com
 ## Piwigo
 
 ## Zenphoto
+
+---
+
+# Git Workflow
+
+```bash
+# neuen Branch direkt im Workspace-Repository erstellen
+cd /l/SPACES/Webspace/Astro-Homepage
+git checkout -b ai-refact
+
+# Änderungen am Code durchführen und commmiten
+# ...
+
+# merge den aktuellen Branch zurück in den Master-Branch
+git checkout master
+git merge ai-refact
+# Die Git-Ausgabe zeigt einen erfolgreichen Fast-Forward-Merge mit 44 Dateien und den aktualisierten Inhalten.
+
+# ---
+
+# neuen Branch erstellen und darauf wechseln
+Set-Location 'L:\SPACES\Webspace\Astro-Homepage'
+git checkout -b ai-refact-dimensions
+
+# Anderungen durchführen
+# ...
+
+# Status überprüfen
+git status --short --branch
+echo '---'
+git branch --all --verbose --no-abbrev
+
+# Zusammenführung auf dem lokalen Master-Branch durchführen
+git checkout master
+git merge --no-edit ai-refact-dimensions
+
+# aktueller Stand des Repos
+git status --short --branch
+echo '---'
+git log --oneline --decorate -5
+
+# lokalen Master-Stand auf den Remote-Server übertragen
+git push origin master
+
+# Feature-Branch bereinigen und schliessen
+git branch -d ai-refact-dimensions
+git branch -d ai-refact
+```
 
 ---
 
@@ -124,6 +172,8 @@ NASA Picture of the Day ?
 
 ### Photo Gallery
 
+using Lightbox, Modal
+
 #### Foto
 
 TODO:
@@ -137,6 +187,7 @@ https://de.wikipedia.org/wiki/Orionnebel
 
 #### Beschreibung
 
+- Beschreibung des Typs, der Größe, der Entfernung, des Sternbilds (und/ oder Koordinaten)
 - Link zu Wikipedia
 - Link zu SkyAtlas (Stellarium, Aladin Lite)
 

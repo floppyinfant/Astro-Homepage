@@ -247,3 +247,157 @@ Read [](file:///l%3A/SPACES/Webspace/Astro-Homepage/html/index.html#200-200), li
 Die Reihenfolge ist jetzt so angepasst, dass das Attribut "attribution" direkt hinter "img" im JSON-Block steht.
 
 Made changes.
+
+---
+
+---
+
+// Gemini
+Um ein Bild beim Klicken in einem schwebenden Fenster (auch bekannt als Lightbox oder Modal) auf der gleichen Seite anzuzeigen, nutzt man meist eine Kombination aus HTML, CSS und JavaScript. Alternativ kannst du das Bild auch einfach über einen Link in einem neuen Browsertab öffnen. [1, 2, 3] 
+Hier sind die beiden besten Lösungen:
+## Methode 1: Schwebendes Fenster (Lightbox-Effekt)
+Das Bild wird zentriert über die aktuelle Seite gelegt und ein dunkler Hintergrund blendet sich ein. Mit einem Klick auf das Bild oder den Schließen-Button verschwindet es wieder. [2, 4, 5, 6, 7] 
+HTML:
+
+<!-- Das kleine Vorschaubild -->
+<img id="myImg" src="kleines-bild.jpg" alt="Beschreibung des Bildes" style="width:100%;max-width:300px;cursor:pointer;">
+<!-- Das schwebende Fenster (Modal) -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+CSS (Design für das schwebende Fenster):
+
+.modal {
+  display: none; /* Standardmäßig versteckt */
+  position: fixed; 
+  z-index: 1; /* Über allen anderen Elementen */
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9); /* Schwarzer Hintergrund mit Transparenz */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+JavaScript (Funktion zum Öffnen/Schließen):
+
+var modal = document.getElementById("myModal");var img = document.getElementById("myImg");var modalImg = document.getElementById("img01");var captionText = document.getElementById("caption");
+
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+// Schließt das Fenster auch, wenn man auf den dunklen Hintergrund klickt
+modal.onclick = function() {
+  modal.style.display = "none";
+}
+
+------------------------------
+## Methode 2: Öffnen in einem separaten Browser-Tab
+Wenn du kein separates Overlay designen möchtest, kannst du das Bild in einen Link mit dem Attribut target="_blank" packen. Dadurch öffnet der Browser automatisch ein neues Fenster oder einen neuen Tab. [3, 8] 
+
+<a href="grosses-bild.jpg" target="_blank" rel="noopener noreferrer">
+  <img src="kleines-bild.jpg" alt="Vorschau" width="300">
+</a>
+
+Tipp: Mit target="_blank" wird das Bild immer in einem neuen Fenster/Tab geöffnet. [3] 
+Möchtest du das schwebende Fenster für mehrere Bilder auf einer Seite nutzen oder soll es sich um eine automatische Bildergalerie mit Pfeiltasten handeln?
+
+[1] [https://www.w3schools.com](http://www.w3schools.com/HOWTO/howto_css_modal_images.asp)
+[2] [https://www.w3schools.com](https://www.w3schools.com/css/css3_images_modal.asp)
+[3] [https://websolutionstogo.de](https://websolutionstogo.de/blog/html-link-neuem-fenster-tab-oeffnen/)
+[4] [https://devlawrence.hashnode.dev](https://devlawrence.hashnode.dev/how-to-create-an-image-pop-up-gallery)
+[5] [https://activecss.org](https://activecss.org/manual/simple-image-modal.html)
+[6] [https://mode9writes.hashnode.dev](https://mode9writes.hashnode.dev/a-step-by-step-guide-to-creating-image-pop-ups-with-css-and-javascript)
+[7] [https://www.youtube.com](https://www.youtube.com/watch?v=H5zTYYOX1to)
+[8] [https://www.html.de](https://www.html.de/threads/bild-offnen.12811/)
+
+---
+
+Ja, <iframe>-Elemente gibt es weiterhin. Sie sind ein fester Bestandteil des aktuellen HTML5-Standards. [1] 
+Moderne Entwickler nutzen sie heute vor allem für:
+
+* Sicherheitsisolation: Sandbox-Umgebungen für Drittanbieter-Inhalte.
+* Medien-Embeds: Einbinden von YouTube-Videos, Google Maps oder Spotify-Playlists.
+* Widgets: Social-Media-Feeds, Zahlungsgateways oder Kommentarspalten. [2] 
+
+Für das reine Laden von Texten oder Seiteninhalten nutzt man heute jedoch meistens JavaScript (Fetch API/AJAX).
+Möchtest du einen YouTube-Inhalt einbinden oder eine externe Webseite anzeigen? [3] 
+
+[1] [https://www.on-design.de](https://www.on-design.de/tutor/html5_css3/html5/iframe/iframes01.html)
+[2] [https://www.noerr.com](https://www.noerr.com/de/insights/digital-media---embedding-framing-und-linking)
+[3] [https://www.seo-suedwest.de](https://www.seo-suedwest.de/5854-google-kann-inhalte-von-iframes-zur-umgebenden-webseite-zaehlen.html)
+
+---
+
+---
+
+Um Stellarium in Ihre Website einzubinden, nutzen Sie am besten die Webversion über ein <iframe>-Element. Damit lässt sich die interaktive Himmelskarte direkt auf Ihrer Seite anzeigen. [1] 
+Kopieren Sie einfach den folgenden HTML-Code und passen Sie die Parameter (z.B. Standort und Ansicht) im Link nach Ihren Wünschen an:
+
+<iframe src="https://stellarium-web.org" 
+        width="100%" 
+        height="500px" 
+        frameborder="0" 
+        allowfullscreen>
+</iframe>
+
+## Erklärung der Parameter:
+
+* lat und lon: Bestimmen den Breitengrad (lat) und Längengrad (lon) für den Standort (im Beispiel oben für Linden/Hessen).
+* fov: Das Sichtfeld (Field of View). Ein Wert von 60 entspricht einer guten Standard-Ansicht.
+* live=true: Zeigt den aktuellen Himmel in Echtzeit.
+
+· 1970 M01 1
+Möchten Sie, dass die Karte einen spezifischen Himmelsausschnitt oder ein bestimmtes Datum anzeigt? Nennen Sie mir Ihre Koordinaten oder die Details, und ich passe den iframe-Code gerne für Sie an.
+
+[1] [https://ghaas.org](https://ghaas.org/Home/stellarium-web-embed/)
+
+
+Ja, das Einbinden von Stellarium über ein <iframe> ist rechtlich grundsätzlich erlaubt. [1, 2] 
+Da die Entwickler den Einbettungs-Link (/embed/index.html) öffentlich und ohne technische Schutzmaßnahmen bereitstellen, greift hier die gängige Rechtsprechung zum sogenannten Framing. Laut Europäischem Gerichtshof (EuGH) verletzt das Einbetten frei zugänglicher Netzinhalte in der Regel keine Urheberrechte. [1, 2] 
+Es gibt jedoch zwei wichtige rechtliche Aspekte, die Sie beachten müssen:
+
+* Datenschutz (DSGVO): Sobald ein Nutzer Ihre Webseite aufruft, lädt der <iframe> Daten direkt von den Servern von Stellarium nach. Dabei wird auch die IP-Adresse des Nutzers übertragen. Sie müssen diesen externen Dienst daher zwingend in Ihrer Datenschutzerklärung aufführen. Ideal ist es, den Frame erst nach der expliziten Zustimmung des Nutzers über ein Cookie-Banner oder einen "Zwei-Klick-Lösung"-Button zu laden. [3] 
+* Keine kommerzielle Zweckentfremdung: Stellarium basiert auf Open-Source-Prinzipien. Die Nutzung auf privaten Blogs, Vereinsseiten oder als Anschauungsmaterial ist völlig unbedenklich. Sie dürfen die Karte jedoch nicht als Ihr eigenes Produkt verkaufen oder kostenpflichtig hinter einer Paywall verbergen. [4, 5, 6, 7, 8] 
+
+Möchten Sie Unterstützung bei einem Datenschutz-Hinweistext für Ihre Webseite oder benötigen Sie Hilfe beim Code für eine Zwei-Klick-Lösung?
+
+[1] [https://www.e-recht24.de](https://www.e-recht24.de/urheberrecht/12535-framing-im-urheberrecht-wann-haften-fuer-fremde-inhalte.html)
+[2] [https://rz.uni-freiburg.de](https://rz.uni-freiburg.de/de/services/elearning/legal)
+[3] [https://www.reddit.com](https://www.reddit.com/r/opensource/comments/1bfptzo/here_is_a_gdpr_solution_for_iframes/)
+[4] [https://github.com](https://github.com/Stellarium/stellarium/issues/3834)
+[5] [https://stellarium.org](https://stellarium.org/de/landscapes.html)
+[6] [https://github.com](https://github.com/Stellarium/stellarium/discussions/3957)
+[7] [https://www.astrotreff.de](https://www.astrotreff.de/forum/index.php?thread/208247-urheberrecht-bei-sternkarten/)
+[8] [https://ghaas.org](https://ghaas.org/Home/stellarium-web-embed/)
+
+---
+
+---
+
