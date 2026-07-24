@@ -110,9 +110,11 @@ git branch -d ai-refact
 - SSL aktivieren (mit htaccess Weiterleiten)
 - Formelsammlung, Foto / Optik Begriffe (s.a. Space Koala, iPhone Fotos)
 
+
 Gallery
 - neue Bilder (optimieren 1920px)
 - Bildunterschriften
+
 
 Dimensionen
 - yottameter, attometer etc. ausschreiben
@@ -120,11 +122,32 @@ Dimensionen
 - Bilder für Subcards
 - Bildnachweis führen (copy embedded link, copa attribution)
 
+```
+				{
+                    "img": "",
+                    "attribution": "",
+                    "text": "",
+                    "wiki": ""
+                },
+                
+185 attribution
+118 attribution fehlen noch
+"attribution": "",
+
+<img class="card-image" src=""
+"img": "",
+
+```
+- use wikimedia thumbs 960px
+
+
 Section Sternkarte / POI
 - section anlegen
 - POI mit div verlay (siehe z.B. Physikerbild in wikimedia commons; suche andere Beispiele)
 
+
 Überschriften und Mission überarbeiten
+
 
 Icon (oben links): nicht DeepsSky, sondern ...
 
