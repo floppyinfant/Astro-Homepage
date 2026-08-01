@@ -218,40 +218,118 @@ https://de.wikipedia.org/wiki/Orionnebel
 
 ### Sternenkarte
 
-Skymap, SkyAtlas
+SkyMap, SkyAtlas
 
+- https://de.wikipedia.org/wiki/Sternkarte
 - Starplot
 - ipyaladin (Aladin Lite)
 - Stellarium
 - Google Sky
 
-Marker
-- AstroPy für SkyCoord und units
-
 #### POI auf Sternenkarte
+
+Marker
+- using AstroPy.Coordinates with Starplot (p.marker()) to get coordinates by name
 
 88 Sternbilder (constellations) der IAU
 - https://de.wikipedia.org/wiki/Internationale_Astronomische_Union
 
-SkyAtlas
-
-SkyMaps
-- https://de.wikipedia.org/wiki/Sternkarte
-
-- Sternenkarte von IAU (OpenSource, Wikipedia)
-- abmalen von der Kosmos-Sternenkarte | Astlas (Buch)
-- Screenshot von Stellarium-Web, Google Sky (copyright)
-
-https://de.wikipedia.org/wiki/Astronomieprogramm
-
-https://stellarium-web.org/
-
 #### interactive Map with Hotspots (POI)
 - Marker
 - Hover-Effect, Mouseover, Tooltip
-- Plotly
+- mpld3 for Matplotlib (used by Starplot)
+- Plotly (Python and JavaScript)
+- D3js (JavaScript)
 - SVG | PNG Overlay: coordinates from Gimp, Affinity, Inscape, Krita
 - Hotspot-Generator-Tools: Image-Map.net, Image-Maps.com, DrawSVG.org, Photopea, Figma
+
+---
+
+Interactive Data Plots | Maps (JS-Libraries)
+- @see Google Docs Webdesign 2026
+
+Starplot
+- https://starplot.dev/examples/
+- uses Matplotlib → mpld3 für interactive Plots
+
+mpld3
+- https://mpld3.github.io
+- https://mpld3.github.io/examples/index.html#example-gallery 
+- https://mpld3.github.io/notebooks/index.html#notebook-examples 
+- https://github.com/mpld3/mpld3
+
+AstroPy
+- https://docs.astropy.org/en/stable/index.html 
+
+@see Google Docs Python 2026
+
+NumPy as np
+
+Pandas as pd
+
+SciPy
+
+Matplotlib.pyplot as plt, Seaborn as sns (static images) → mpld3 für interactive Plots
+- https://matplotlib.org/ 
+- https://seaborn.pydata.org/ 
+- https://www.w3schools.com/PYTHON/matplotlib_pyplot.asp 
+- https://www.geeksforgeeks.org/python/python-introduction-matplotlib/ 
+- https://www.datacamp.com/tutorial/matplotlib-tutorial-python 
+- https://www.datacamp.com/de/tutorial/seaborn-python-tutorial 
+
+Jupyter Notebook
+- https://ipython.org/ipython-doc/dev/notebook/index.html
+- https://ipython.org/ipython-doc/dev/notebook/notebook.html#plotting
+- %matplotlib inline
+
+Streamlit as st (nur App-Server)
+- https://streamlit.io/
+
+D3js
+- https://d3js.org/ 
+- https://www.developer-world.de/dwx-insights/web-development/webkartenkoenig-d3js
+- https://www.massiveart.com/de-de/blog/d3-js-oder-erfolgreich-daten-visualisiert-im-web
+
+SVG
+- https://de.wikipedia.org/wiki/Scalable_Vector_Graphics
+- https://www.w3schools.com/graphics/svg_intro.asp
+- https://www.w3schools.com/graphics/svg_path.asp
+- https://www.w3schools.com/graphics/svg_reference.asp
+
+—
+
+Plotly
+- https://plotly.com/
+- https://docs.plotly.com/
+- https://plotly.com/python/
+- https://plotly.com/javascript/
+
+Plotly Express
+- import plotly.express as px
+
+Plotly Dash
+- https://plotly.com/python/filled-area-plots/
+- https://www.tu-chemnitz.de/mathematik/fima/dana/lehre/statistik/html/visualisierung2.html
+
+Bokeh
+
+StoryMapJS
+- https://storymap.knightlab.com/
+- https://storymap.knightlab.com/examples/aryas-journey/
+
+TimelineJS
+- https://timeline.knightlab.com/
+
+Timeline
+- https://www.simile-widgets.org/timeline/
+
+QGIS
+- https://www.qgis.org/
+
+Wolfram Alpha
+- https://www.wolframalpha.com/
+
+
 
 ---
 
