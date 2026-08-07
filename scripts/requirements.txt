@@ -1,5 +1,6 @@
 astropy
 starplot
+mpld3
 plotly
 ipyaladin
 sidecar

@@ -31,6 +31,9 @@ pip install -r requirements.txt
 - https://skyatlas.app/star-charts/
 - https://steveberardimaps.com/products/all-sky-map (Printed All Sky Map)
 
+### mpld3
+Erweiterung für Matplotlib (Starplot nutzt Matplotlib), um interaktive Maps für HTML zu erstellen
+
 
 ## Plotly
 Um eine All-Sky-Map (Ganzhimmelskarte) zu erstellen und Ihre Fotos über POI-Marker (Points of Interest) interaktiv zu verlinken, kombiniert man am besten Astropy (für die Himmelskoordinaten) mit Plotly anstelle von Matplotlib.
