@@ -356,6 +356,10 @@ TODO
 - Bildgröße optimieren oder dynamisch laden von Wikimedia ?
 - Bildnachweis
 
+background-color in CSS-File geändert:
+- .card-image
+- .gallery-viewer
+
 AI Generated Pictures
 - img2img
 - txt2img
