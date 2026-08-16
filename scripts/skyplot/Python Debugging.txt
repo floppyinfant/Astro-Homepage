@@ -1,0 +1,126 @@
+Python Debugging
+
+
+Locals
+Globals
+
+builtins
+
+special variables
+    __class__, __call__, __str__, ...
+function variables
+class variables
+
+---
+
+p.marker()  # <bound method BasePlot.marker of <starplot.plots.map.MapPlot object at ...>>
+
+p.ax
+p.fig
+p.objects
+p.projection = Mollweide
+
+---
+
+.venv
+    Lib/site-packages/
+        starplot/plots/base.py
+            BasePlot.marker()
+
+        # Plot marker
+        x, y = self._prepare_coords(ra, dec)
+        style_kwargs = style.marker.matplot_scatter_kwargs(self.scale)
+        result = self.ax.scatter(
+            x,
+            y,
+            **style_kwargs,
+            **self._plot_kwargs(),
+            clip_on=True,
+            clip_path=self._background_clip_path,
+            gid=kwargs.get("gid_marker") or "marker",
+        )
+
+        # Add to spatial index
+        data_xy = self._proj.transform_point(x, y, self._crs)
+        display_x, display_y = self.ax.transData.transform(data_xy)
+        if display_x > 0 and display_y > 0:
+            radius = style_kwargs.get("s", 1) ** 0.5 / 5
+            bbox = np.array(
+                (
+                    display_x - radius,
+                    display_y - radius,
+                    display_x + radius,
+                    display_y + radius,
+                )
+            )
+            self._markers_rtree.insert(0, bbox, None)
+
+        # Plot label
+        if label:
+            label_style = style.label
+            if label_style.offset_x == "auto" or label_style.offset_y == "auto":
+                marker_size = ((style.marker.size / self.scale) ** 2) * (
+                    self.scale**2
+                )
+
+                label_style = label_style.offset_from_marker(
+                    marker_symbol=style.marker.symbol,
+                    marker_size=marker_size,
+                    scale=self.scale,
+                )
+            self.text(
+                label,
+                ra,
+                dec,
+                label_style,
+                collision_handler=collision_handler or self.point_label_handler,
+                gid=kwargs.get("gid_label") or "marker-label",
+            )
+
+        if legend_label is not None:
+            self._legend_handles[legend_label] = result
+
+---
+
+base.py/BasePlot/
+
+        self.ax: Axes = None
+        """
+        The underlying [Matplotlib axes](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes) that everything is plotted on.
+        
+        **Important**: Most Starplot plotting functions also specify a transform based on the plot's projection when plotting things on the Matplotlib Axes instance, so use this property at your own risk!
+        """
+
+        self.fig: Figure = None
+        """
+        The underlying [Matplotlib figure](https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure) that the axes is drawn on.
+        """
+
+        
+DEFAULT_RESOLUTION = 4096
+
+DPI = 100
+
+
+        px = 1 / DPI  # pixel in inches
+        self.pixels_per_point = DPI / 72
+        self.dpi = DPI
+
+        self.language = StarplotSettings.language
+
+        self.style = style or PlotStyle()
+        """The plot's style."""
+
+        self.figure_size = resolution * px
+        self.resolution = resolution
+
+
+        self.scale = scale
+        self.autoscale = autoscale
+        if self.autoscale:
+            self.scale = self.resolution / DEFAULT_RESOLUTION
+
+        self.scale *= 1.28
+
+---
+
