@@ -5,3 +5,7 @@ plotly
 ipyaladin
 sidecar
 regions
+scipy
+numpy
+pandas
+matplotlib
