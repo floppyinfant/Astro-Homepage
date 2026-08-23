@@ -295,6 +295,46 @@ const galleryItems = [
     meta: "Blick nach Süden, Richtung Sternbild Schütze (Sagittarius) und dem Zentrum der Milchstraße",
     desc_link: "https://de.wikipedia.org/wiki/Milchstraße",
     date: "2026-07-11"
+  },
+  {
+    id: 25,
+    title: "Adler-Nebel",
+    category: "nebulae",
+    src: "pics/M16_Eagle_Nebula_DWARF3_24h30_Duo_2026-08-09.jpg",
+    description: "Der Adlernebel im Sternbild Schlange ist etwa 7000 Lichtjahre entfernt. Er enthält ein Sternentstehungsgebiet, bekannt unter dem Namen Die Säulen der Schöpfung (Pillars of Creation).",
+    meta: "Sternbild Schlange",
+    desc_link: "https://de.wikipedia.org/wiki/Adlernebel",
+    date: "2026-08-09"
+  },
+  {
+    id: 26,
+    title: "Meteor der Perseiden und Milchstraße",
+    category: "galaxies",
+    src: "pics/Grueninger_Warte_Perseiden_Meteor_Schwan_2026-08-09.jpg",
+    description: "Eine Sternschnuppe der Perseiden vor dem Sternbild Schwan im Band der Milchstraße. Aufgenommen mit dem iPhone (Standard Foto-App, Stativ) an der Grüninger Warte.",
+    meta: "Apple iPhone 14 Pro, Kamera App, Langzeitbelichtung Nacht 10s, Stativ",
+    desc_link: "https://de.wikipedia.org/wiki/Perseiden",
+    date: "2026-08-09"
+  },
+  {
+    id: 27,
+    title: "Sonnenfinsternis (Timelapse)",
+    category: "solar",
+    src: "pics/DWARF3_TELE_TL_2026-08-12.mov",
+    description: "Zeitraffer-Video der partiellen Sonnenfinsternis am 12.08.2026 in Heuchelheim (Hessen).",
+    meta: "DWARF3 Smart-Telescope",
+    desc_link: "https://de.wikipedia.org/wiki/Sonnenfinsternis",
+    date: "2026-08-12"
+  },
+  {
+    id: 28,
+    title: "Sonne mit Protuberanz (Solar Flare)",
+    category: "solar",
+    src: "pics/Sun_Solar_Flare_Coronado_2026-08-12.jpg",
+    description: "",
+    meta: "Coronado Sonnenteleskop, Foto mit Smartphone durch das Okular.",
+    desc_link: "https://de.wikipedia.org/wiki/Protuberanz",
+    date: "2026-08-12"
   }
 ];
 
@@ -322,7 +362,9 @@ const hiresPathMap = {
   'pics/M31_Andromeda-Galaxy_51m_Astro_2026-07-10.jpg': 'pics-hires/M31_Andromeda-Galaxy_51m_Astro_2026-07-10.png',
   'pics/MilkyWay_2026-07-11.jpg': 'pics-hires/MilkyWay_2026-07-11.png',
   'pics/MilkyWay-Adler_2026-07-11.jpg': 'pics-hires/MilkyWay-Adler_2026-07-11.png',
-  'pics/MilkyWay-South_2026-07-11.jpg': 'pics-hires/MilkyWay-South_2026-07-11.png'
+  'pics/MilkyWay-South_2026-07-11.jpg': 'pics-hires/MilkyWay-South_2026-07-11.png',
+  'pics/M16_Eagle_Nebula_DWARF3_24h30_Duo_2026-08-09.jpg': 'pics-hires/M16_Eagle_Nebula_DWARF3_24h30_Duo_2026-08-09.png',
+  'pics/Grueninger_Warte_Perseiden_Meteor_Schwan_2026-08-09.jpg': 'pics-hires/Grueninger_Warte_Perseiden_Meteor_Schwan_2026-08-09.jpeg'
 };
 
 galleryItems.forEach((item) => {
