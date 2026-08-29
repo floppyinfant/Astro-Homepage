@@ -320,8 +320,8 @@ const galleryItems = [
     id: 27,
     title: "Sonnenfinsternis (Timelapse)",
     category: "solar",
-    src: "pics/DWARF3_TELE_TL_2026-08-12.mov",
-    description: "Zeitraffer-Video der partiellen Sonnenfinsternis am 12.08.2026 in Heuchelheim (Hessen).",
+    src: "pics/solar-eclipse_preview.jpg",
+    description: "Zeitraffer-Video der partiellen Sonnenfinsternis am 12.08.2026 in Heuchelheim/ Hessen (klick auf das Bild, um das Video zu sehen).",
     meta: "DWARF3 Smart-Telescope",
     desc_link: "https://de.wikipedia.org/wiki/Sonnenfinsternis",
     date: "2026-08-12"
@@ -364,7 +364,8 @@ const hiresPathMap = {
   'pics/MilkyWay-Adler_2026-07-11.jpg': 'pics-hires/MilkyWay-Adler_2026-07-11.png',
   'pics/MilkyWay-South_2026-07-11.jpg': 'pics-hires/MilkyWay-South_2026-07-11.png',
   'pics/M16_Eagle_Nebula_DWARF3_24h30_Duo_2026-08-09.jpg': 'pics-hires/M16_Eagle_Nebula_DWARF3_24h30_Duo_2026-08-09.png',
-  'pics/Grueninger_Warte_Perseiden_Meteor_Schwan_2026-08-09.jpg': 'pics-hires/Grueninger_Warte_Perseiden_Meteor_Schwan_2026-08-09.jpeg'
+  'pics/Grueninger_Warte_Perseiden_Meteor_Schwan_2026-08-09.jpg': 'pics-hires/Grueninger_Warte_Perseiden_Meteor_Schwan_2026-08-09.jpeg',
+  'pics/solar-eclipse_preview.jpg': 'pics-hires/DWARF3_TELE_TL_2026-08-12.mov'
 };
 
 galleryItems.forEach((item) => {
