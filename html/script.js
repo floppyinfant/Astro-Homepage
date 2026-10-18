@@ -365,7 +365,7 @@ const hiresPathMap = {
   'pics/MilkyWay-South_2026-07-11.jpg': 'pics-hires/MilkyWay-South_2026-07-11.png',
   'pics/M16_Eagle_Nebula_DWARF3_24h30_Duo_2026-08-09.jpg': 'pics-hires/M16_Eagle_Nebula_DWARF3_24h30_Duo_2026-08-09.png',
   'pics/Grueninger_Warte_Perseiden_Meteor_Schwan_2026-08-09.jpg': 'pics-hires/Grueninger_Warte_Perseiden_Meteor_Schwan_2026-08-09.jpeg',
-  'pics/solar-eclipse_preview.jpg': 'pics-hires/DWARF3_TELE_TL_2026-08-12.mov'
+  'pics/solar-eclipse_preview.jpg': 'mov/Sonnenfinsternis_Deutschland.mp4'
 };
 
 galleryItems.forEach((item) => {
