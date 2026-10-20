@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown & LaTeX Renderer</title>
+
+    <!-- 1. KaTeX CSS für die mathematische Formatierung -->
+    <link rel="stylesheet" href="https://jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+    <!-- Stylesheet für eine saubere Darstellung (optional) -->
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            color: #333;
+        }
+        /* Verhindert, dass lange Formeln auf Mobilgeräten abgeschnitten werden */
+        .katex-display {
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hier wird das gerenderte Ergebnis hineingeschrieben -->
+    <div id="content">Lade Inhalte...</div>
+
+    <!-- 2. marked.js laden (übersetzt Markdown in HTML) -->
+    <script src="https://jsdelivr.net/npm/marked@11.1.1/lib/marked.umd.js"></script>
+
+    <!-- 3. KaTeX JavaScript & Auto-Render-Extension laden -->
+    <script src="https://jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <!-- Dein originaler Markdown-Inhalt -->
+    <script id="markdown-content" type="text/text">
+### Field of View (FOV)
+
+Syn: Bildwinkel, Blickfeld, Sichtfeld, Gesichtsfeld
+
+$$
+\begin{aligned}
+\alpha &= 2 \cdot \arctan\left(\frac{d}{2 \cdot f}\right) \\[0.8em]
+&\text{mit:} \\
+&\quad \alpha: \text{Bildwinkel (in Grad)} \\
+&\quad d: \text{Sensorgröße (z. B. Breite des Sensors in mm)} \\
+&\quad f: \text{Brennweite des Objektivs (in mm)} \\
+&\quad \arctan: \text{Arkustangens (die Umkehrfunktion des Tangens)}
+\end{aligned}
+$$
+
+Ergebnis in Radiant. Umrechnung in Grad:
+
+$$\alpha_{\text{Grad}} = \alpha_{\text{Rad}} \cdot \frac{360^\circ}{2 \pi} \approx \alpha \cdot 57,3°$$
+    </script>
+
+    <!-- 4. Das eigentliche Render-Skript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Markdown-Text aus dem Skript-Tag auslesen
+            const markdownRaw = document.getElementById('markdown-content').textContent;
+
+            // Schritt A: Markdown in normales HTML umwandeln
+            const htmlContent = marked.parse(markdownRaw);
+            
+            // HTML in das Ziel-Verzeichnis auf der Seite schreiben
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = htmlContent;
+
+            // Schritt B: KaTeX sucht im generierten HTML nach $$...$$ und rendert das LaTeX
+            renderMathInElement(contentDiv, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });
+        });
+    </script>
+</body>
+</html>
